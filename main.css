@@ -1,0 +1,1560 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+@font-face{
+    font-family: 'Obviously Demo Wide Semibold';
+    src: url('./Assets/Fonts/ObviouslyDemo/ObviouslyDemo-WideSemibold.otf');
+}
+
+@font-face{
+    font-family: 'Obviously Demo Wide Medium';
+    src: url('./Assets/Fonts/ObviouslyDemo/ObviouslyDemo-WideMedium.otf');
+}
+
+@font-face{
+    font-family: 'Obviously Demo Condensed Light';
+    src: url('/Assets/Fonts/ObviouslyDemo/ObviouslyDemo-CondensedLight.otf');
+}
+
+@font-face{
+    font-family: 'Obviously Demo Condensed Medium';
+    src: url('./Assets/Fonts/ObviouslyDemo/ObviouslyDemo-CondensedMedium.otf');
+}
+
+@font-face{
+    font-family: 'Obviously Demo Condensed Bold';
+    src: url('./Assets/Fonts/ObviouslyDemo/ObviouslyDemo-CondensedBold.otf');
+}
+
+@font-face{
+    font-family: 'Maison Neue Medium';
+    src: url('./Assets/Fonts/MaisonNeue/MaisonNeue-Medium.ttf');
+}
+
+@font-face{
+    font-family: 'Maison Neue Bold';
+    src: url('./Assets/Fonts/MaisonNeue/MaisonNeue-Bold.ttf');
+}
+
+/**************************************************************** 
+-----------------------------------------------------------------
+                            HEADER
+-----------------------------------------------------------------
+*****************************************************************/
+
+header{
+    position: fixed;
+    background: #FD6757;
+    height: 123px;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+    z-index: 30;
+}
+
+.header-retract{
+    top: -123px;
+}
+
+.progress-icon{
+    position: fixed;
+    right: 0;
+    top: 358px;
+    z-index: 19;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.nav-logo{
+    height: 59px;
+    width: 78px;
+    margin-left: 50px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 50px;
+}
+
+ul > span{
+    padding: 10px 20px;
+    margin-left: 15px;
+}
+
+.landing-page-nav-cta{
+    border: solid 3px black;
+}
+
+.landing-page-nav-cta:hover{
+    cursor:pointer;
+}
+
+.landing-page-nav-cta > li{
+    color: white;
+}
+
+li{
+    list-style-type: none;
+    font-family: 'Obviously Demo Wide Semibold';
+}
+
+li:hover{
+    cursor: pointer;
+}
+
+.mobile-menu-icon{
+    display: none;
+}
+
+.mobile-menu {
+    height: 0px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hamburger-icon-container {
+    width: 85px;
+    height: 85px;
+    border: solid 6px black;
+    margin-right: 50px;
+    display: none;
+}
+
+.hamburger-icon-hl{
+    width: 70%;
+    margin-left: 12%;
+    margin-bottom: 10px;
+    border: solid 3px white;
+}
+
+.hamburger-icon-hl-1{
+    margin-top: 22px;
+}
+
+/**************************************************************** 
+-----------------------------------------------------------------
+                            LANDING PAGE
+-----------------------------------------------------------------
+*****************************************************************/
+
+.page{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.landing-page{
+    padding-top: 123px;
+    background: #FD6757;
+}
+
+.landing-page-smear{
+    height: 48%;
+    width: 75%;
+    margin-top: 89px;
+    margin-left: 227px;
+}
+
+.landing-page-description{
+    margin-top: 74px;
+    text-align: center;
+    font-family: 'Maison Neue Medium';
+    font-size: 16px;
+}
+
+/**************************************************************** 
+-----------------------------------------------------------------
+                            BARS PAGE
+-----------------------------------------------------------------
+*****************************************************************/
+
+.bars-page-container{
+    width: 90%;
+    height: 70%;
+    margin-top: 10%;
+    margin-left: 5%;
+    display: flex;
+}
+
+.bars-page-description-container, .bar-grouping{
+    flex: 1;
+}
+
+.bars-page-description-container{
+    background: black;
+    margin-right: 10px;
+}
+
+.bars-page-header {
+    color: white;
+    font-family: 'Obviously Demo Condensed Bold';
+    font-size: 72px;
+    margin: 20px 0px;
+    margin-left: 20%;
+    text-transform: capitalize;
+    display: none;
+}
+
+.bars-page-hr{
+    margin-top: 30% !important;
+    height: 3px;
+    background: white;
+}
+
+.bars-page-hr, .bars-page-description{
+    width: 60%;
+    margin: 0 20%;
+}
+
+.bars-page-description{
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Maison Neue Medium';
+    font-size: 16px;
+}
+
+.bar-grouping{
+    width: 50%;
+}
+
+.cta{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-family: 'Obviously Demo Wide Semibold';
+} 
+
+.cta:hover{
+    cursor: pointer;
+}
+
+.bars-page-cta{
+    border: solid 3px #FD6757;
+    padding: 10px 20px;
+    margin-left: 20%;
+}
+
+/**************************************************************** 
+-----------------------------------------------------------------
+                        SALARIES PAGE
+-----------------------------------------------------------------
+*****************************************************************/
+
+.salaries-page{
+    height: auto;
+}
+
+.salaries-page-database-label{
+    font-family: 'Obviously Demo Wide Medium';
+    font-size: 16px;
+    margin-left: 5%;
+}
+
+.salaries-page-headline{
+    font-family: 'Obviously Demo Condensed Light';
+    font-size: 72px;
+    width: 80%;
+    margin-left: 5%;
+    text-transform: uppercase;
+}
+
+.make-redorange{
+    font-family: 'Obviously Demo Condensed Medium';
+    color: #FD6757;
+}
+
+.salaries-page-slideshow{
+    display: flex;
+    width: 80%;
+    margin-left: 5%;
+}
+
+.salaries-page-slideshow-averages-container{
+    width: 90%;
+    height: auto;
+}
+
+.salaries-slideshow-label-span{
+    display: flex;
+}
+
+.salaries-slideshow-label{
+    font-family: 'Obviously Demo Condensed Light';
+    font-size: 24px;
+    margin-left: 40px;
+}
+
+.salaries-slideshow-lowest{
+    width: 40%;
+}
+
+.salaries-slideshow-average{
+    width: 56%;
+}
+
+.salaries-slideshow-highest{
+    width: 70%;
+}
+
+.salaries-slideshow-lowest,
+.salaries-slideshow-average,
+.salaries-slideshow-highest{
+    background: black;
+    /* height: 25%; */
+    padding: 20px 50px;
+}
+
+.salaries-slideshow-lowest,
+.salaries-slideshow-average{
+    margin-bottom: 4%;
+}
+
+.salaries-slideshow-salary{
+    color: #FD6757;
+    font-family: 'Obviously Demo Condensed Bold';
+    font-size: 72px;
+    margin: 0;
+}
+
+.salaries-slideshow-profile-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.salaries-slideshow-profile-label{
+    color: white;
+    margin-top: 29px;
+    margin-bottom: 0px;
+}
+
+.slideshow-arrow{
+    width: 25px;
+    height: 22px;
+    margin-top: 25px;
+}
+
+.slideshow-arrow:hover{
+    cursor: pointer;
+}
+
+.salaries-page-slideshow-vertical-bar{
+    height: auto;
+    width: 10px;
+    background: black;
+    margin-right: 20px;
+}
+
+.salaries-slideshow-sliders-container{
+    display: flex;
+    width: 62%;
+    margin-left: calc(5% + 30px);
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.salaries-slideshow-slider{
+    width: calc((100% - 102px)/4);
+    height: 10px;
+    background: black;
+    opacity: 5%;
+}
+
+.salaries-slideshow-slider:hover{
+    cursor: pointer;
+}
+
+.salaries-slideshow-slider-1,
+.salaries-slideshow-slider-2,
+.salaries-slideshow-slider{
+    margin-right: 34px;
+}
+
+.salaries-slideshow-slider-active{
+    opacity: 100%;
+}
+
+/**************************************************************** 
+-----------------------------------------------------------------
+                            BLOG PAGE
+-----------------------------------------------------------------
+*****************************************************************/
+
+.blog-page{
+    height: auto;
+}
+
+.blog-page-main-header,
+.blog-page-mobile-header{
+    width: 100%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    display: flex;
+}
+
+.blog-page-mobile-header{
+    display: none;
+}
+
+.redorange-header-rectangle-1,
+.redorange-header-rectangle-2,
+.redorange-header-rectangle-3,
+.redorange-header-rectangle-4,
+.redorange-header-rectangle-mobile{
+    background: #FD6757;
+
+}
+
+.redorange-header-rectangle-1,
+.redorange-header-rectangle-2{
+    height: 95px;
+    margin-top: 3px;
+}
+
+.redorange-header-rectangle-3,
+.redorange-header-rectangle-4{
+    height: 75px;
+    margin-top: 10px;
+}
+
+.redorange-header-rectangle-2{
+    width: 3970px;
+}
+
+.redorange-header-rectangle-1{
+    width: 260px;
+}
+
+.redorange-header-rectangle-3{
+    width: 700px;
+}
+
+.redorange-header-rectangle-4{
+    width: 2230px;
+}
+
+.blog-page-header-container{
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.blog-page-header-1,
+.blog-page-header-2{
+    height: 100px;
+    font-size: 120px;
+    font-family: 'Obviously Demo Condensed Bold';
+    text-transform: uppercase;
+    margin: 0px 10px;
+    margin-top: -60px;
+}
+
+.blog-page-header-2{
+    font-size: 72px;
+    margin-top: -20px;
+}
+
+.blog-page-scrolling-ticker{
+    overflow-x: hidden;
+    white-space: nowrap;
+    height: 80px;
+    width: 100%;
+    border-top: #FD6757 solid 4px;
+    border-bottom: #FD6757 solid 4px;
+    margin-top: 10px;
+}
+
+@keyframes revolve{
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+      }
+    
+      100% {
+        -webkit-transform: translate3d(-95rem, 0, 0);
+        transform: translate3d(-95rem, 0, 0);
+      }
+}
+
+.ticker-label{
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Obviously Demo Wide Semibold';
+    /* transition: all .3s ease-in-out; */
+    animation: revolve 5s linear infinite;
+}
+
+.ticker-arrow{
+    margin: 0px 20px;
+    margin-top: 25px;
+    height: 20px; 
+    width: 20px;
+    position: relative;
+    bottom: -4px;
+}
+
+.blog-container-label{
+    margin-top:100px;
+    margin-left: 50px;
+    font-family: 'Obviously Demo Wide Medium';
+    font-size: 16px;
+}
+
+.blog-container{
+    width: calc(100%-100px);
+    margin: 0 50px;
+}
+
+.blog-post-hl{
+    width: 10px;
+    height: auto;
+    margin-right: 15px;
+    background: black;
+}
+
+.blog-post{
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.blog-post:hover{
+    cursor: pointer;
+}
+
+.blog-post-image{
+    width: 0px;
+    /* height: auto; */
+}
+
+.blog-post-last{
+    margin-bottom: 60px;
+}
+
+@keyframes grow{
+    100%{
+        width: 270px;
+    }
+}
+
+.blog-post-1:hover .blog-post-image-1,
+.blog-post-2:hover .blog-post-image-2,
+.blog-post-3:hover .blog-post-image-3,
+.blog-post-last:hover .blog-post-image-last{
+    transition: all .3s ease-in-out; 
+    margin-right: 11px;
+    animation: grow 1s ease forwards;
+}
+
+.blog-post-1:hover .blog-post-hl-1,
+.blog-post-2:hover .blog-post-hl-2,
+.blog-post-3:hover .blog-post-hl-3,
+.blog-post-last:hover .blog-post-hl-last{
+    background: #FD6757;
+}
+
+.blog-post-distributor,
+.blog-post-date{
+    margin: 0px;
+}
+
+.blog-post-distributor{
+    font-family: 'Obviously Demo Wide Medium';
+    font-size: 16px;
+}
+
+.blog-post-title{
+    margin: 10px 0px;
+    font-family: 'Maison Neue Bold';
+    font-size: 40px;
+}
+
+.blog-post-date{
+    font-family: 'Maison Neue Medium';
+    font-size: 16px;
+}
+
+.blog-page-cta{
+    width: 150px;
+    padding: 5px 0px 10px 20px;
+    margin: 20px 0px 100px 50px;
+    color: black;
+    font-size: 16px;
+    border: solid 4px #FD6757;
+    display: flex;
+}
+
+.blog-page-cta-label{
+    margin: 0px;
+    margin-right: 15px;
+}
+
+.blog-page-arrow{
+    width: 20px;
+    position: relative;
+    bottom: -4px;
+    height: 20px;
+}
+
+/**************************************************************** 
+-----------------------------------------------------------------
+                        SOCIAL MEDIA PAGE
+-----------------------------------------------------------------
+*****************************************************************/
+
+.social-media-page{
+    height: auto;
+}
+
+.social-media-page-ticker{
+    width: 100%;
+    height: 150px;
+    border-top: solid #FD6757 10px;
+    border-bottom: solid #FD6757 10px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    padding-top: 40px;
+}
+
+@keyframes revolve2{
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+      }
+    
+      100% {
+        -webkit-transform: translate3d(-100rem, 0, 0);
+        transform: translate3d(-100rem, 0, 0);
+      }
+}
+
+.social-media-ticker-label{
+    font-family: 'Obviously Demo Condensed Bold';
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-right: 30px;
+    display: inline-block;
+    animation: revolve2 5s linear infinite;
+}
+
+.make-redorange-2{
+    color: #FD6757;
+}
+
+.social-media-message-box-label{
+    margin-top: 100px;
+    margin-left: 5%;
+    font-family: 'Obviously Demo Wide Medium';
+    font-size: 16px;
+}
+
+.social-media-message-box-container{
+    position: relative;
+    margin-top: 40px;
+}
+
+.social-media-message-container{
+    position: absolute;
+    color: #FD6757;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 4%;
+}
+
+.social-media-message-label-container,
+.social-media-message-date{
+    font-family: 'Obviously Demo Wide Medium';
+    font-size: 16px;
+    color: white;
+}
+
+.social-media-message-label-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid white 4px;
+}
+
+.social-media-message-platform{
+    padding-bottom: 20px;
+}
+
+.social-media-message{
+    font-family: 'Maison Neue Bold';
+    font-size: 40px;
+    letter-spacing: -2px;
+    line-height: 48px;
+}
+
+.social-media-message-date{
+    font-family: 'Maison Neue Medium';
+    margin-bottom: 20px;
+}
+
+.social-media-message-box,
+.social-media-message-box-mobile{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.social-media-message-box-mobile{
+    display: none;
+}
+
+.social-media-sliders-container{
+    display: flex;
+    width: 62%;
+    margin-left: calc(33% + 40px);
+    margin-top: 0px;
+    margin-bottom: 80px;
+}
+
+.social-media-slider{
+    width: calc((100% - 102px)/4);
+    height: 10px;
+    background: black;
+    opacity: 5%;
+}
+
+.social-media-slider:hover{
+    cursor: pointer;
+}
+
+.social-media-slider-1,
+.social-media-slider-2,
+.social-media-slider{
+    margin-right: 40px;
+}
+
+.social-media-slider-active{
+    opacity: 100%;
+}
+
+/**************************************************************** 
+-----------------------------------------------------------------
+                            FOOTER
+-----------------------------------------------------------------
+*****************************************************************/
+
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: #FD6757;
+}
+
+.contact-info{
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 60px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ras-email-address{
+    font-family: 'Obviously Demo Wide Medium';
+    font-size: 16px;
+}
+
+.cta-section{
+    width: 90%;
+    margin-left: 5%; 
+    display: flex;
+    justify-content: space-between;
+    border-top: solid black 4px;
+    border-bottom: solid black 4px;
+    padding-bottom: 40px;
+}
+
+.newsletter-signup,
+.press-kit-download{
+    width: 40%; 
+}
+
+.newsletter-label,
+.press-kit-label{
+    margin: 0px;
+    font-size: 72px;
+    font-family: 'Obviously Demo Condensed Bold';
+    text-transform: uppercase;
+}
+
+.newletter-description,
+.press-kit-description{
+    font-family: 'Maison Neue Medium';
+    font-size: 16px;
+}
+
+.cta-section input{
+    background: #FD6757;
+    border: none;
+    color: white;
+    font-family: 'Obviously Demo Wide Medium';
+    font-size: 16px;
+}
+
+::placeholder{
+    color: white;
+    font-family: 'Obviously Demo Condensed Bold';
+    font-size: 24px;
+}
+
+.newsletter-input-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.newsletter-input-field{
+    flex: 2;
+}
+
+.newsletter-input-button{
+    width: 100px;
+}
+
+.newsletter-input-button:hover{
+    cursor: pointer;
+}
+
+.press-kit-download-button{
+    margin-top: -11px;
+}
+
+.press-kit-download-button:hover{
+    cursor: pointer;
+}
+
+.misc-info{
+    width: 90%;
+    margin-left: 5%; 
+    display: flex;
+    justify-content: space-between
+}
+
+.terms-and-copyright,
+.social-media-links{
+    display: flex;
+    margin: 20px 0px;
+}
+
+.terms-and-copyright{
+    font-family: 'Maison Neue Medium';
+    font-size: 16px;
+}
+
+.copyright,
+.privacy-policy,
+.insta{
+    margin-right: 50px;
+}
+
+.social-media-links{
+    font-family: 'Maison Neue Bold';
+    font-size: 16px;
+}
+
+.footer-links:hover{
+    cursor: pointer;
+}
+
+/**************************************************************** 
+-----------------------------------------------------------------
+                            MEDIA QUERIES
+-----------------------------------------------------------------
+*****************************************************************/
+
+@media only screen and (max-width: 1399px){
+    .landing-page-description{
+        font-size: 20px;
+    }
+    .social-media-message{
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    .bars-page-description{
+        font-size: 20px;
+    }
+    .redorange-header-rectangle-1{
+        width: 160px;
+    }
+    
+    .redorange-header-rectangle-3{
+        width: 600px;
+    }
+
+    .social-media-message{
+        font-size: 33px;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .salaries-slideshow-label {
+        font-size: 35px;
+    }
+    .redorange-header-rectangle-1{
+        width: 100px;
+    }
+    
+    .redorange-header-rectangle-3{
+        width: 440px;
+    }
+
+    .social-media-message{
+        margin-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 1150px){
+    .social-media-message{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 1093px) {
+    ul > span {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    .social-media-message{
+        font-size: 26px;
+    }
+    .social-media-message-date{
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (max-width: 1025px){
+    .landing-page-smear{
+        margin-left: 150px;
+    }
+    .redorange-header-rectangle-3 {
+        width: 240px;
+    }
+    .social-media-message{
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 998px){
+    ul > span {
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    .nav-logo {
+        height: 85px;
+        width: 130px;
+    }
+    ul{
+        display: none;
+    }
+    .mobile-menu-icon{
+        width: 85px;
+        height: 85px;
+        margin-right: 50px;
+        display: block;
+    }
+    .mobile-menu{
+        transition: opacity 400ms ease-in;
+        background: black;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+    }
+    .mobile-menu:target{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .mobile-menu-header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .mobile-menu-logo{
+        height: 132px;
+        width: 150px;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    .mobile-menu-header a{
+        width: 85px;
+        height: 83px;
+        margin-top: 75px;
+        margin-right: 50px;
+        text-decoration: none;
+    }
+    a .mobile-menu-close-button{
+        color: white;
+        text-decoration: none;
+        border: solid #FD6757 6px;
+        padding: 0px 0px 12px 24px;
+        font-size: 50px;
+    }
+    .mobile-menu-close-button:hover{
+        cursor: pointer;
+    }
+    .mobile-menu-links{
+        display: block;
+        color: white;
+        margin-top: 100px;
+    }
+    .mobile-menu-links > span > li{
+        font-family: 'Obviously Demo Wide Medium';
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+    .mobile-menu-links > span > li:hover{
+        cursor: pointer;
+    }
+    .mobile-menu-nav-cta > li{
+        border: solid #FD6757 6px;
+        padding: 20px 50px;
+        margin-top: 150px;
+        width: 60%;
+    }
+    .hamburger-icon-container{
+        display: block;
+    }
+    .progress-icon{
+        display: none;
+    }
+    .landing-page-smear-container{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .landing-page-smear{
+        width: 135%;
+        margin-left: -102px;
+    }
+    .landing-page-description {
+        font-size: 35px;
+    }
+    .bars-page-header{
+        margin-left: 10%;
+        display: block;
+    }
+    .bars-page-hr{
+        margin-top: 0px !important;
+    }
+    .bars-page-hr, .bars-page-description {
+        width: 80%;
+        margin: 0px 10%;
+    }
+    .bars-page-description-container {
+        margin-right: 0px;
+    }
+    .bars-page-description {
+        font-size: 33px;
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
+    .bars-page-cta {
+        border: solid 6px #FD6757;
+        padding: 15px 20px;
+        margin-left: 10%;
+        font-size: 26px;
+    }
+    .bar-grouping {
+        display: none;
+    }
+    .salaries-page-database-label {
+        font-size: 30px;
+        margin-top: 0px;
+    }
+    .salaries-page-headline {
+        font-size: 80px;
+    }
+    .salaries-slideshow-label {
+        font-size: 45px;
+    }
+    .salaries-slideshow-profile-container {
+        font-size: 25px;
+    }
+    .salaries-slideshow-profile-label {
+        margin-top: 20px;
+    }
+    .slideshow-arrow {
+        width: 32px;
+        height: 30px;
+        margin-top: 21px;
+    }
+    .blog-page-main-header{
+        display: none;
+    }
+    .blog-page-mobile-header{
+        display: flex;
+    }
+    .blog-page-header-mobile{
+        font-family: 'Obviously Demo Condensed Bold';
+        text-transform: uppercase;
+        font-size: 100px;
+        padding: 0px 10px;
+    }
+    .blog-page-mobile-header-2,
+    .blog-page-mobile-header-3,
+    .blog-page-mobile-header-4{
+        margin-top: -55px;
+    }
+    .redorange-header-rectangle-mobile{
+        height: 87px;
+        margin-top: 50px;
+    }
+    .redorange-header-rectangle-1-mobile,
+    .redorange-header-rectangle-5-mobile{
+        width: 100px;
+    }
+    .redorange-header-rectangle-4-mobile,
+    .redorange-header-rectangle-8-mobile{
+        width: 1000px;
+    }
+    .redorange-header-rectangle-2-mobile,
+    .redorange-header-rectangle-6-mobile{
+        width: 1000px;
+    }
+    .redorange-header-rectangle-3-mobile,
+    .redorange-header-rectangle-7-mobile{
+        width: 300px;
+    }
+    .blog-container-label {
+        font-size: 25px;
+    }
+    .ticker-label {
+        font-size: 22px;
+    }
+    .ticker-arrow{
+        height: 25px;
+        width: 25px;
+    }
+    .blog-post-distributor, 
+    .blog-post-date {
+        font-size: 25px;
+    }
+    .blog-page-cta {
+        width: 260px;
+        padding: 5px 0px 10px 52px;
+        font-size: 27px;
+    }
+    .blog-page-cta-label {
+        margin-right: 20px;
+    }
+    .blog-page-arrow {
+        width: 35px;
+        bottom: -6px;
+        height: 35px;
+    }
+    .social-media-message-box-label {
+        font-size: 25px;
+    }
+    .social-media-message-label-container {
+        padding-bottom: 10px;
+        display: block;
+    }
+    .social-media-message-label-container, 
+    .social-media-message-date {
+        font-size: 25px;
+    }
+    .social-media-message-container{
+        margin-top: 2%;
+    }
+    .social-media-message {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 50px;
+    }
+    .social-media-message-box{
+        display: none;
+    }
+    .social-media-message-box-mobile{
+        display: block;
+        height: 600px;
+    }
+    .contact-info{
+        display: block;
+    }
+    .footer-logo{
+        width: 100px;
+        height: 100px;
+    }
+    .ras-email-address {
+        font-size: 22px;
+    }
+    .cta-section {
+        display: block;
+        border-top: solid black 6px;
+        border-bottom: solid black 6px;
+    }
+    .newsletter-signup, 
+    .press-kit-download {
+        width: 100%;
+    }
+    .newsletter-label, 
+    .press-kit-label {
+        font-size: 80px;
+    }
+    .newletter-description, 
+    .press-kit-description {
+        font-size: 35px;
+    }
+    .newsletter-signup{
+        border-bottom: solid black 6px;
+        padding-bottom: 36px;
+    }
+    .cta-section input {
+        font-size: 27px;
+    }
+    ::placeholder{
+        font-size: 32px;
+    }
+    .newsletter-input-container {
+        display: block;
+    }
+    .newsletter-input-button {
+        width: auto;
+    }
+    .misc-info {
+        flex-direction: column-reverse;
+    }
+    .terms-and-copyright, 
+    .social-media-links {
+        margin: 0px;
+        display: block;
+        text-align: center;
+        font-size: 35px;
+    }
+    .copyright, .privacy-policy, .insta {
+        margin-right: 0px;
+    }
+    .terms-and-conditions{
+        margin-bottom: 27px;
+    }
+}
+
+@media only screen and (max-width: 775px){
+    .landing-page-smear-container {
+        margin-top: 50px;
+    }
+    .landing-page-description {
+        margin-top: 140px;
+        font-size: 30px;
+    }
+    .bars-page-header {
+        width: 80%;
+        font-size: 65px;
+    }
+    .blog-post-1:hover .blog-post-image-1,
+    .blog-post-2:hover .blog-post-image-2,
+    .blog-post-3:hover .blog-post-image-3,
+    .blog-post-last:hover .blog-post-image-last{
+        animation: none;
+    }
+    .blog-post-title{
+        font-size: 35px;
+    }
+    .blog-post-distributor, 
+    .blog-post-date {
+        font-size: 20px;
+    }
+    .blog-page-cta {
+        font-size: 25px;
+    }
+
+    .social-media-message {
+        margin-bottom: 50px;
+        font-size: 35px;
+    }
+    .newletter-description, 
+    .press-kit-description {
+        font-size: 30px;
+    }
+    .cta-section input {
+        font-size: 25px;
+    }
+    .terms-and-copyright, .social-media-links {
+        font-size: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 724px){
+    .mobile-menu-logo {
+        height: 100px;
+        width: 120px;
+    }
+    .mobile-menu-header a {
+        margin-top: 60px;
+    }
+    .mobile-menu-links > span > li {
+        font-size: 25px;
+    }
+    .mobile-menu-nav-cta > li {
+        margin-top: 50px;
+    }
+    .redorange-header-rectangle-1-mobile, 
+    .redorange-header-rectangle-5-mobile {
+        width: 40px;
+    }
+    .redorange-header-rectangle-3-mobile, 
+    .redorange-header-rectangle-7-mobile {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 674px){
+    .bars-page-description {
+        font-size: 30px;
+    }
+    .bars-page-cta {
+        font-size: 24px;
+    }
+    .blog-page-header-mobile {
+        font-size: 72px;
+    }
+    .redorange-header-rectangle-mobile {
+        height: 80px;
+        margin-top: 54px;
+    }
+    .blog-page-header-mobile{
+        font-size: 85px;
+        margin-top: 15px;
+    }
+    .social-media-message-container {
+        margin-top: 5%;
+    }
+    .social-media-message-label-container, 
+    .social-media-message-date {
+        font-size: 20px;
+    }
+    .social-media-message {
+        font-size: 30px;
+    }
+    .newsletter-label, 
+    .press-kit-label {
+        font-size: 70px;
+    }
+}
+
+@media only screen and (max-width: 579px){
+    .nav-logo {
+        height: 75px;
+        width: 100px;
+    }
+    .hamburger-icon-container {
+        width: 70px;
+        height: 70px;
+    }
+    .hamburger-icon-hl-1 {
+        margin-top: 15px;
+    }
+    .landing-page-smear{
+        margin-top: 60px;
+        margin-left: -69px;
+    }
+    .landing-page-description {
+        margin-top: 100px;
+        font-size: 25px;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .bars-page-container {
+        height: 90%;
+        margin-top: 5%;
+    }
+    .bars-page-header {
+        font-size: 60px;
+    }
+    .bars-page-description {
+        font-size: 25px;
+    }
+    .salaries-page-headline {
+        font-size: 70px;
+    }
+    .salaries-slideshow-salary{
+        font-size: 60px;
+    }
+    .salaries-slideshow-label {
+        font-size: 40px;
+    }
+    .blog-post-distributor, 
+    .blog-post-date {
+        font-size: 18px;
+    }
+    .blog-post-title {
+        font-size: 30px;
+    }
+    .footer-logo {
+        width: 80px;
+        height: 80px;
+    }
+    .ras-email-address {
+        font-size: 20px;
+    }
+    .newsletter-label, 
+    .press-kit-label {
+        font-size: 60px;
+    }
+    .newletter-description, 
+    .press-kit-description {
+        font-size: 24px;
+    }
+    .terms-and-copyright, 
+    .social-media-links {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    .redorange-header-rectangle-1-mobile, 
+    .redorange-header-rectangle-5-mobile {
+        width: 20px;
+    }
+    .redorange-header-rectangle-3-mobile, 
+    .redorange-header-rectangle-7-mobile {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 474px){
+    .bars-page-description {
+        font-size: 20px;
+    }
+    .bars-page-cta {
+        font-size: 20px;
+    }
+    .salaries-slideshow-label-span {
+        flex-direction: column-reverse;
+    }
+    .salaries-page-headline{
+        width: 90%;
+    }
+    .salaries-slideshow-label{
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .salaries-slideshow-label-br{
+        display: none;
+    }
+    .blog-page-header-mobile {
+        font-size: 70px;
+        margin-top: 31px;
+    }
+    .social-media-message {
+        font-size: 25px;
+    }
+    .ras-email-address {
+        font-size: 16px;
+    }
+    .cta-section input {
+        font-size: 20px;
+    }
+    ::placeholder{
+        font-size: 20px;
+    }
+    .newletter-description, 
+    .press-kit-description {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 404px){
+    .mobile-menu-icon {
+        margin-right: 20px;
+    }
+    .nav-logo{
+        margin-left: 20px;
+    }
+    .salaries-page-database-label {
+        font-size: 25px;
+    }
+    .salaries-page-headline {
+        font-size: 60px;
+    }
+    .mobile-menu-links > span > li {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .ras-email-address {
+        font-size: 14px;
+    }
+    .blog-page-header-mobile {
+        font-size: 60px;
+        margin-top: 45px;
+    }
+    .redorange-header-rectangle-mobile {
+        height: 60px;
+        margin-top: 70px;
+    }
+    .redorange-header-rectangle-1-mobile, 
+    .redorange-header-rectangle-5-mobile {
+        width: 11px;
+    }
+    .redorange-header-rectangle-3-mobile, 
+    .redorange-header-rectangle-7-mobile {
+        width: 70px;
+    }
+    .blog-page-cta {
+        width: 240px;
+        padding: 0px 0px 10px 25px;
+    }
+    .cta-section input {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-height: 1050px){
+    .mobile-menu-nav-cta > li{
+        margin-top: 70px;
+    }
+}
+
+@media only screen and (max-height: 900px){
+    .mobile-menu-nav-cta > li {
+        margin-top: 20px;
+    }
+    .bars-page-container {
+        height: 80%;
+    }
+}
+
+@media only screen and (max-height: 825px){
+    .mobile-menu-logo {
+        height: 80px;
+        width: 100px;
+    }
+    .mobile-menu-header a {
+        margin-top: 64px;
+        width: 65px;
+        height: 56px;
+    }
+    a .mobile-menu-close-button{
+        padding: 0px 0px 8px 20px;
+        font-size: 30px;
+    }
+    .mobile-menu-links {
+        margin-top: 80px;
+    }
+    .mobile-menu-links > span > li {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+}
