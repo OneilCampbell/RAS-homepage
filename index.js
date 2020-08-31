@@ -59,23 +59,36 @@
 
     var $salary_slider_0 = document.getElementById('salary-slider-0');
     $salary_slider_0.addEventListener('click', function (){
-        populate_salary_info(0)
+        clearInterval(salary_slideshow_cycle);
+        populate_salary_info(0);
     })
 
     var $salary_slider_1 = document.getElementById('salary-slider-1');
     $salary_slider_1.addEventListener('click', function (){
-        populate_salary_info(1)
+        clearInterval(salary_slideshow_cycle);
+        populate_salary_info(1);
     })
 
     var $salary_slider_2 = document.getElementById('salary-slider-2');
     $salary_slider_2.addEventListener('click', function (){
-        populate_salary_info(2)
+        clearInterval(salary_slideshow_cycle);
+        populate_salary_info(2);
     })
 
     var $salary_slider_3 = document.getElementById('salary-slider-3');
     $salary_slider_3.addEventListener('click', function (){
-        populate_salary_info(3)
+        clearInterval(salary_slideshow_cycle);
+        populate_salary_info(3);
     })
+
+    var salary_slideshow_cycle_index = 1;
+    var salary_slideshow_cycle = setInterval(function(){
+        if(salary_slideshow_cycle_index > 3) {
+            salary_slideshow_cycle_index = 0;
+        }
+        populate_salary_info(salary_slideshow_cycle_index);
+        salary_slideshow_cycle_index++;
+    }, 3000)
 
     /* 
     -------------------------------------------------------------
@@ -135,23 +148,36 @@
 
     var $social_media_slider_0 = document.getElementById('social-media-slider-0');
     $social_media_slider_0.addEventListener('click', function(){
+        clearInterval(social_media_cycle);
         change_social_media_display(0);
     })
 
     var $social_media_slider_1 = document.getElementById('social-media-slider-1');
     $social_media_slider_1.addEventListener('click', function(){
+        clearInterval(social_media_cycle);
         change_social_media_display(1);
     })
 
     var $social_media_slider_2 = document.getElementById('social-media-slider-2');
     $social_media_slider_2.addEventListener('click', function(){
+        clearInterval(social_media_cycle);
         change_social_media_display(2);
     })
 
     var $social_media_slider_3 = document.getElementById('social-media-slider-3');
     $social_media_slider_3.addEventListener('click', function(){
+        clearInterval(social_media_cycle);
         change_social_media_display(3);
     })
+
+    var social_media_cycle_index = 1;
+    var social_media_cycle = setInterval(function(){
+        if(social_media_cycle_index > 3) {
+            social_media_cycle_index = 0;
+        }
+        change_social_media_display(social_media_cycle_index);
+        social_media_cycle_index++;
+    }, 3000)
 
     /* 
     -------------------------------------------------------------
@@ -205,15 +231,40 @@
         var currScrollTop = $(this).scrollTop();
         // console.log(currScrollTop);
         var page;
-        if(currScrollTop < br_p_sh - 500){
+        if(currScrollTop < br_p_sh - 250){
+            $('header')[0].style.background = '#FD6757';
+            $('.hamburger-icon-hl')[0].style.borderColor = 'white';
+            $('.hamburger-icon-hl')[1].style.borderColor = 'white';
+            $('.hamburger-icon-hl')[2].style.borderColor = 'white';
+            $('.hamburger-icon-container')[0].style.borderColor = 'black';
             page = 1;
         }else if(currScrollTop < sl_p_sh - 358){
+            $('header')[0].style.background = 'white';
+            $('.hamburger-icon-hl')[0].style.borderColor = 'black';
+            $('.hamburger-icon-hl')[1].style.borderColor = 'black';
+            $('.hamburger-icon-hl')[2].style.borderColor = 'black';
+            $('.hamburger-icon-container')[0].style.borderColor = '#FD6757';
             page = 2;
         }else if(currScrollTop < bl_p_sh - 358){
+            $('header')[0].style.background = 'white';
+            $('.hamburger-icon-hl')[0].style.borderColor = 'black';
+            $('.hamburger-icon-hl')[1].style.borderColor = 'black';
+            $('.hamburger-icon-hl')[2].style.borderColor = 'black';
+            $('.hamburger-icon-container')[0].style.borderColor = '#FD6757';
             page = 3;
         }else if(currScrollTop < sm_p_sh - 358){
+            $('header')[0].style.background = 'white';
+            $('.hamburger-icon-hl')[0].style.borderColor = 'black';
+            $('.hamburger-icon-hl')[1].style.borderColor = 'black';
+            $('.hamburger-icon-hl')[2].style.borderColor = 'black';
+            $('.hamburger-icon-container')[0].style.borderColor = '#FD6757';
             page = 4;
         }else{
+            $('header')[0].style.background = 'white';
+            $('.hamburger-icon-hl')[0].style.borderColor = 'black';
+            $('.hamburger-icon-hl')[1].style.borderColor = 'black';
+            $('.hamburger-icon-hl')[2].style.borderColor = 'black';
+            $('.hamburger-icon-container')[0].style.borderColor = '#FD6757';
             page = 5;
         }
         
@@ -224,9 +275,9 @@
         var currScrollTop = $(this).scrollTop();
         
         // Make sure they scroll more than delta
-        if(Math.abs(prevScrollTop - currScrollTop) <= deltaScroll)
+        if(Math.abs(prevScrollTop - currScrollTop) <= deltaScroll){
             return;
-        
+        }
         // Check to see if user scrolled down past navbar height at the top of the page
         if (currScrollTop > prevScrollTop && currScrollTop > navHeight){
             // if so and user is scrolling down, hide nav

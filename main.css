@@ -1,8 +1,4 @@
-html, body{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-}
+@import url("https://use.typekit.net/ffo1egr.css");
 
 @font-face{
     font-family: 'Obviously Demo Wide Semibold';
@@ -30,6 +26,11 @@ html, body{
 }
 
 @font-face{
+    font-family: 'Maison Neue Book';
+    src: url('./Assets/Fonts/MaisonNeue/MaisonNeue-Book.ttf');
+}
+
+@font-face{
     font-family: 'Maison Neue Medium';
     src: url('./Assets/Fonts/MaisonNeue/MaisonNeue-Medium.ttf');
 }
@@ -37,6 +38,12 @@ html, body{
 @font-face{
     font-family: 'Maison Neue Bold';
     src: url('./Assets/Fonts/MaisonNeue/MaisonNeue-Bold.ttf');
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
 /**************************************************************** 
@@ -61,7 +68,7 @@ header{
 
 .progress-icon{
     position: fixed;
-    right: 0;
+    right: 5px;
     top: 358px;
     z-index: 19;
 }
@@ -75,22 +82,46 @@ nav{
 .nav-logo{
     height: 59px;
     width: 78px;
-    margin-left: 50px;
+    margin-left: 5%;
+    margin-top: 15px;
 }
 
 ul{
     display: flex;
     justify-content: space-evenly;
-    padding-right: 50px;
+    padding-right: 5%;
 }
 
 ul > span{
     padding: 10px 20px;
+    padding-top: 13px;
     margin-left: 15px;
 }
 
+@keyframes highlight{
+    100%{
+        background-position: left bottom;
+    }
+}
+
+.highlight:hover{
+    animation: highlight 1s linear forwards;
+}
+  
+
 .landing-page-nav-cta{
-    border: solid 3px black;
+    padding-top: 7px;
+    border: solid 6px black;
+    background: linear-gradient(to left, #FD6757 50%, black 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
+}
+
+.landing-page-nav-cta-inverse{
+    border: solid 6px #FD6757;
+    background: linear-gradient(to right, #FD6757 50%, white 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
 }
 
 .landing-page-nav-cta:hover{
@@ -99,11 +130,14 @@ ul > span{
 
 .landing-page-nav-cta > li{
     color: white;
+    font-weight: 500;
 }
 
 li{
     list-style-type: none;
-    font-family: 'Obviously Demo Wide Semibold';
+    font-family: obviously-wide, sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 li:hover{
@@ -121,22 +155,22 @@ li:hover{
 }
 
 .hamburger-icon-container {
-    width: 85px;
-    height: 85px;
+    width: 55px;
+    height: 55px;
     border: solid 6px black;
-    margin-right: 50px;
+    margin-right: 5%;
+    margin-top: 15px;
     display: none;
 }
 
-.hamburger-icon-hl{
-    width: 70%;
-    margin-left: 12%;
-    margin-bottom: 10px;
-    border: solid 3px white;
+.hamburger-icon-hl-1 {
+    margin-top: 15px;
 }
-
-.hamburger-icon-hl-1{
-    margin-top: 22px;
+.hamburger-icon-hl {
+    width: 50%;
+    margin-left: 20%;
+    margin-bottom: 7px;
+    border: solid 2px white;
 }
 
 /**************************************************************** 
@@ -148,11 +182,13 @@ li:hover{
 .page{
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .landing-page{
     padding-top: 123px;
+    padding-bottom: 1px;
+    height: calc(100% - 123px);
     background: #FD6757;
 }
 
@@ -160,11 +196,13 @@ li:hover{
     height: 48%;
     width: 75%;
     margin-top: 89px;
-    margin-left: 227px;
+    /* margin-left: 227px; */
+    margin-left: 15%;
 }
 
 .landing-page-description{
     margin-top: 74px;
+    margin-bottom: 93px;
     text-align: center;
     font-family: 'Maison Neue Medium';
     font-size: 16px;
@@ -195,16 +233,15 @@ li:hover{
 
 .bars-page-header {
     color: white;
-    font-family: 'Obviously Demo Condensed Bold';
+    font-family: obviously-condensed, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 72px;
-    margin: 20px 0px;
-    margin-left: 20%;
-    text-transform: capitalize;
-    display: none;
+    margin: 5% 0px 20px 20%;
+    text-transform: uppercase;
 }
 
 .bars-page-hr{
-    margin-top: 30% !important;
     height: 3px;
     background: white;
 }
@@ -218,8 +255,9 @@ li:hover{
     color: white;
     margin-top: 30px;
     margin-bottom: 30px;
-    font-family: 'Maison Neue Medium';
+    font-family: 'Maison Neue Book';
     font-size: 16px;
+    line-height: 24px;
 }
 
 .bar-grouping{
@@ -230,7 +268,9 @@ li:hover{
     text-decoration: none;
     color: white;
     text-align: center;
-    font-family: 'Obviously Demo Wide Semibold';
+    font-family: obviously-wide, sans-serif;
+    font-weight: 600;
+    font-style: normal;
 } 
 
 .cta:hover{
@@ -238,9 +278,15 @@ li:hover{
 }
 
 .bars-page-cta{
-    border: solid 3px #FD6757;
+    display: block;
+    width: 220px;
+    margin-top: 30px;
+    border: solid 6px #FD6757;
     padding: 10px 20px;
     margin-left: 20%;
+    background: linear-gradient(to right, #FD6757 50%, black 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
 }
 
 /**************************************************************** 
@@ -254,21 +300,29 @@ li:hover{
 }
 
 .salaries-page-database-label{
-    font-family: 'Obviously Demo Wide Medium';
+    font-family: obviously-wide, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 16px;
     margin-left: 5%;
+    margin-bottom: 10px;
 }
 
 .salaries-page-headline{
-    font-family: 'Obviously Demo Condensed Light';
+    font-family: obviously-condensed, sans-serif;
+    font-weight: 300;
+    font-style: normal;
     font-size: 72px;
     width: 80%;
     margin-left: 5%;
-    text-transform: uppercase;
+    margin-top: 0px;
+    line-height: 72px;
 }
 
 .make-redorange{
-    font-family: 'Obviously Demo Condensed Medium';
+    font-family: obviously-condensed, sans-serif;
+    font-weight: 500;
+    font-style: normal;
     color: #FD6757;
 }
 
@@ -283,72 +337,108 @@ li:hover{
     height: auto;
 }
 
-.salaries-slideshow-label-span{
+.salaries-slideshow-arrow-container{
     display: flex;
+    justify-content: space-between;
+}
+
+.salaries-slideshow-label-span{
+    /* display: flex; */
 }
 
 .salaries-slideshow-label{
-    font-family: 'Obviously Demo Condensed Light';
-    font-size: 24px;
-    margin-left: 40px;
+    font-family: obviously-condensed, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 35px;
+    margin: 0px;
+    color: black;
 }
 
 .salaries-slideshow-lowest{
     width: 40%;
+    background:rgba(253, 103, 87, .15);
+    color: #FD6757;
 }
 
 .salaries-slideshow-average{
     width: 56%;
+    background: rgba(0,0,0,.05);
+    color: black;
 }
 
 .salaries-slideshow-highest{
     width: 70%;
+    background: rgba(77, 160, 231, .15);
+    color: #4DA0E7;
+}
+
+.salaries-slideshow-lowest:hover,
+.salaries-slideshow-average:hover,
+.salaries-slideshow-highest:hover{
+    cursor: pointer;
 }
 
 .salaries-slideshow-lowest,
 .salaries-slideshow-average,
 .salaries-slideshow-highest{
-    background: black;
     /* height: 25%; */
     padding: 20px 50px;
 }
 
-.salaries-slideshow-lowest,
+.salaries-slideshow-highest,
 .salaries-slideshow-average{
     margin-bottom: 4%;
 }
 
 .salaries-slideshow-salary{
-    color: #FD6757;
-    font-family: 'Obviously Demo Condensed Bold';
+    font-family: obviously-condensed, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 72px;
     margin: 0;
 }
 
 .salaries-slideshow-profile-container{
+    font-family: 'Maison Neue Medium';
+    font-weight: 500;
     display: flex;
     justify-content: space-between;
 }
 
 .salaries-slideshow-profile-label{
-    color: white;
+    color: black;
     margin-top: 29px;
     margin-bottom: 0px;
+}
+
+.salaries-slideshow-profile-hover{
+    margin-bottom: 0px;
+    margin-top: 30px;
+    display: none;
+}
+
+.salaries-slideshow-lowest:hover .hover-lowest{
+    display: block;
+}
+
+.salaries-slideshow-average:hover .hover-average{
+    display: block;
+}
+
+.salaries-slideshow-highest:hover .hover-highest{
+    display: block;
 }
 
 .slideshow-arrow{
     width: 25px;
     height: 22px;
-    margin-top: 25px;
-}
-
-.slideshow-arrow:hover{
-    cursor: pointer;
+    margin-top: 55px;
 }
 
 .salaries-page-slideshow-vertical-bar{
     height: auto;
-    width: 10px;
+    width: 20px;
     background: black;
     margin-right: 20px;
 }
@@ -364,8 +454,9 @@ li:hover{
 .salaries-slideshow-slider{
     width: calc((100% - 102px)/4);
     height: 10px;
-    background: black;
-    opacity: 5%;
+    background: linear-gradient(to right, #FD6757 50%, rgba(0,0,0,.05) 50%);
+    background-size: 201% 100%;
+    background-position:right bottom;
 }
 
 .salaries-slideshow-slider:hover{
@@ -379,6 +470,7 @@ li:hover{
 }
 
 .salaries-slideshow-slider-active{
+    background: black;
     opacity: 100%;
 }
 
@@ -395,7 +487,7 @@ li:hover{
 .blog-page-main-header,
 .blog-page-mobile-header{
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     white-space: nowrap;
     display: flex;
 }
@@ -450,7 +542,9 @@ li:hover{
 .blog-page-header-2{
     height: 100px;
     font-size: 120px;
-    font-family: 'Obviously Demo Condensed Bold';
+    font-family: obviously-condensed, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     text-transform: uppercase;
     margin: 0px 10px;
     margin-top: -60px;
@@ -462,7 +556,7 @@ li:hover{
 }
 
 .blog-page-scrolling-ticker{
-    overflow-x: hidden;
+    overflow: hidden;
     white-space: nowrap;
     height: 80px;
     width: 100%;
@@ -487,9 +581,15 @@ li:hover{
 .ticker-label{
     display: inline-block;
     font-size: 16px;
-    font-family: 'Obviously Demo Wide Semibold';
+    font-family: obviously-wide, sans-serif;
+    font-weight: 600;
+    font-style: normal;
     /* transition: all .3s ease-in-out; */
     animation: revolve 5s linear infinite;
+}
+
+.blog-page-scrolling-ticker:hover .ticker-label{
+    animation: none;
 }
 
 .ticker-arrow{
@@ -503,14 +603,16 @@ li:hover{
 
 .blog-container-label{
     margin-top:100px;
-    margin-left: 50px;
-    font-family: 'Obviously Demo Wide Medium';
+    margin-left: 5%;
+    font-family: obviously-wide, sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 16px;
 }
 
 .blog-container{
     width: calc(100%-100px);
-    margin: 0 50px;
+    margin: 0 5%;
 }
 
 .blog-post-hl{
@@ -561,35 +663,44 @@ li:hover{
     background: #FD6757;
 }
 
+.blog-post-info{
+    width: 99%;
+}
+
 .blog-post-distributor,
 .blog-post-date{
     margin: 0px;
 }
 
 .blog-post-distributor{
-    font-family: 'Obviously Demo Wide Medium';
+    font-family: obviously-wide, sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 16px;
 }
 
 .blog-post-title{
     margin: 10px 0px;
-    font-family: 'Maison Neue Bold';
+    font-family: 'Maison Neue Medium';
     font-size: 40px;
 }
 
 .blog-post-date{
-    font-family: 'Maison Neue Medium';
+    font-family: 'Maison Neue Book';
     font-size: 16px;
 }
 
 .blog-page-cta{
-    width: 150px;
-    padding: 5px 0px 10px 20px;
-    margin: 20px 0px 100px 50px;
+    width: 165px;
+    padding: 10px 0px 15px 35px;
+    margin: 20px 0px 100px 5%;
     color: black;
     font-size: 16px;
-    border: solid 4px #FD6757;
+    border: solid 6px #FD6757;
     display: flex;
+    background: linear-gradient(to right, #FD6757 50%, white 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
 }
 
 .blog-page-cta-label{
@@ -619,7 +730,7 @@ li:hover{
     height: 150px;
     border-top: solid #FD6757 10px;
     border-bottom: solid #FD6757 10px;
-    overflow-x: hidden;
+    overflow: hidden;
     white-space: nowrap;
     padding-top: 40px;
 }
@@ -638,12 +749,18 @@ li:hover{
 }
 
 .social-media-ticker-label{
-    font-family: 'Obviously Demo Condensed Bold';
+    font-family: obviously-condensed, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 60px;
     text-transform: uppercase;
     margin-right: 30px;
     display: inline-block;
     animation: revolve2 5s linear infinite;
+}
+
+.social-media-page-ticker:hover .social-media-ticker-label{
+    animation: none;
 }
 
 .make-redorange-2{
@@ -653,7 +770,9 @@ li:hover{
 .social-media-message-box-label{
     margin-top: 100px;
     margin-left: 5%;
-    font-family: 'Obviously Demo Wide Medium';
+    font-family: obviously-wide, sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 16px;
 }
 
@@ -672,7 +791,9 @@ li:hover{
 
 .social-media-message-label-container,
 .social-media-message-date{
-    font-family: 'Obviously Demo Wide Medium';
+    font-family: obviously-wide, sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 16px;
     color: white;
 }
@@ -693,6 +814,7 @@ li:hover{
     font-size: 40px;
     letter-spacing: -2px;
     line-height: 48px;
+    margin-bottom: 20px;
 }
 
 .social-media-message-date{
@@ -721,8 +843,9 @@ li:hover{
 .social-media-slider{
     width: calc((100% - 102px)/4);
     height: 10px;
-    background: black;
-    opacity: 5%;
+    background: linear-gradient(to right, #FD6757 50%, rgba(0,0,0,.05) 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
 }
 
 .social-media-slider:hover{
@@ -736,6 +859,7 @@ li:hover{
 }
 
 .social-media-slider-active{
+    background: black;
     opacity: 100%;
 }
 
@@ -762,8 +886,12 @@ footer{
 }
 
 .ras-email-address{
-    font-family: 'Obviously Demo Wide Medium';
+    font-family: obviously-wide, sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 16px;
+    margin-top: 35px;
+    margin-bottom: 0px;
 }
 
 .cta-section{
@@ -785,13 +913,16 @@ footer{
 .press-kit-label{
     margin: 0px;
     font-size: 72px;
-    font-family: 'Obviously Demo Condensed Bold';
+    font-family: obviously-condensed, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     text-transform: uppercase;
+    letter-spacing: 0px;
 }
 
 .newletter-description,
 .press-kit-description{
-    font-family: 'Maison Neue Medium';
+    font-family: 'Maison Neue Book';
     font-size: 16px;
 }
 
@@ -799,14 +930,19 @@ footer{
     background: #FD6757;
     border: none;
     color: white;
-    font-family: 'Obviously Demo Wide Medium';
+    font-family: obviously-wide, sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 16px;
 }
 
 ::placeholder{
-    color: white;
-    font-family: 'Obviously Demo Condensed Bold';
+    color: black;
+    font-family: obviously-condensed, sans-serif;
+    font-weight: 600;
+    font-style: normal;
     font-size: 24px;
+    letter-spacing: 1.5px;
 }
 
 .newsletter-input-container{
@@ -829,7 +965,7 @@ footer{
 }
 
 .press-kit-download-button{
-    margin-top: -11px;
+    margin-top: 14px;
 }
 
 .press-kit-download-button:hover{
@@ -861,7 +997,9 @@ footer{
 }
 
 .social-media-links{
-    font-family: 'Maison Neue Bold';
+    font-family: obviously-wide, sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 16px;
 }
 
@@ -937,9 +1075,18 @@ footer{
     }
 }
 
+@media only screen and (max-width: 1042px){
+    .bars-page-header{
+        font-size: 62px;
+    }
+}
+
 @media only screen and (max-width: 1025px){
-    .landing-page-smear{
+    /* .landing-page-smear{
         margin-left: 150px;
+    } */
+    .bars-page-header{
+        font-size: 52px;
     }
     .redorange-header-rectangle-3 {
         width: 240px;
@@ -959,6 +1106,7 @@ footer{
     .nav-logo {
         height: 85px;
         width: 130px;
+        margin-top: 5px;
     }
     ul{
         display: none;
@@ -966,7 +1114,7 @@ footer{
     .mobile-menu-icon{
         width: 85px;
         height: 85px;
-        margin-right: 50px;
+        margin-right: 28px;
         display: block;
     }
     .mobile-menu{
@@ -1018,7 +1166,9 @@ footer{
         margin-top: 100px;
     }
     .mobile-menu-links > span > li{
-        font-family: 'Obviously Demo Wide Medium';
+        font-family: obviously-wide, sans-serif;
+        font-weight: 500;
+        font-style: normal;
         font-size: 32px;
         margin-bottom: 50px;
     }
@@ -1039,18 +1189,22 @@ footer{
     }
     .landing-page-smear-container{
         width: 100%;
-        overflow-x: hidden;
+        overflow: hidden;
     }
     .landing-page-smear{
         width: 135%;
-        margin-left: -102px;
+        margin-left: -156px;
     }
     .landing-page-description {
-        font-size: 35px;
+        font-size: 24px;
+        margin-bottom: 40px;
     }
     .bars-page-header{
+        margin-top: 9%;
         margin-left: 10%;
+        font-size: 72px;
         display: block;
+        letter-spacing: 0px;
     }
     .bars-page-hr{
         margin-top: 0px !important;
@@ -1063,21 +1217,23 @@ footer{
         margin-right: 0px;
     }
     .bars-page-description {
-        font-size: 33px;
+        font-size: 24px;
         margin-bottom: 50px;
-        margin-top: 20px;
+        margin-top: 40px;
     }
     .bars-page-cta {
         border: solid 6px #FD6757;
         padding: 15px 20px;
+        padding-top: 5px;
+        width: 220px;
         margin-left: 10%;
-        font-size: 26px;
+        font-size: 16px;
     }
     .bar-grouping {
         display: none;
     }
     .salaries-page-database-label {
-        font-size: 30px;
+        font-size: 20px;
         margin-top: 0px;
     }
     .salaries-page-headline {
@@ -1095,8 +1251,20 @@ footer{
     .slideshow-arrow {
         width: 32px;
         height: 30px;
-        margin-top: 21px;
+        /* margin-top: 21px; */
     }
+
+    .salaries-slideshow-lowest,
+    .salaries-slideshow-average{
+        width: 70%;
+    }
+
+    .salaries-slideshow-lowest:hover .hover-lowest,
+    .salaries-slideshow-average:hover .hover-average,
+    .salaries-slideshow-highest:hover .hover-highest{
+        display: none;
+    }
+
     .blog-page-main-header{
         display: none;
     }
@@ -1104,7 +1272,9 @@ footer{
         display: flex;
     }
     .blog-page-header-mobile{
-        font-family: 'Obviously Demo Condensed Bold';
+        font-family: obviously-condensed, sans-serif;
+        font-weight: 700;
+        font-style: normal;
         text-transform: uppercase;
         font-size: 100px;
         padding: 0px 10px;
@@ -1135,7 +1305,7 @@ footer{
         width: 300px;
     }
     .blog-container-label {
-        font-size: 25px;
+        font-size: 20px;
     }
     .ticker-label {
         font-size: 22px;
@@ -1146,23 +1316,23 @@ footer{
     }
     .blog-post-distributor, 
     .blog-post-date {
-        font-size: 25px;
+        font-size: 20px;
     }
     .blog-page-cta {
-        width: 260px;
-        padding: 5px 0px 10px 52px;
-        font-size: 27px;
+        width: 290px;
+        padding: 7px 0px 13px 30px;
+        font-size: 20px;
     }
     .blog-page-cta-label {
-        margin-right: 20px;
+        margin-right: 131px;
     }
     .blog-page-arrow {
-        width: 35px;
+        width: 25px;
         bottom: -6px;
-        height: 35px;
+        height: 25px;
     }
     .social-media-message-box-label {
-        font-size: 25px;
+        font-size: 20px;
     }
     .social-media-message-label-container {
         padding-bottom: 10px;
@@ -1170,15 +1340,16 @@ footer{
     }
     .social-media-message-label-container, 
     .social-media-message-date {
-        font-size: 25px;
+        font-size: 16px;
     }
     .social-media-message-container{
-        margin-top: 2%;
+        margin-top: 12%;
     }
     .social-media-message {
         margin-top: 30px;
         margin-bottom: 30px;
-        font-size: 50px;
+        font-size: 40px;
+        line-height: 38px;
     }
     .social-media-message-box{
         display: none;
@@ -1191,8 +1362,8 @@ footer{
         display: block;
     }
     .footer-logo{
-        width: 100px;
-        height: 100px;
+        width: 130px;
+        height: 85px;
     }
     .ras-email-address {
         font-size: 22px;
@@ -1212,7 +1383,7 @@ footer{
     }
     .newletter-description, 
     .press-kit-description {
-        font-size: 35px;
+        font-size: 30px;
     }
     .newsletter-signup{
         border-bottom: solid black 6px;
@@ -1238,7 +1409,6 @@ footer{
         margin: 0px;
         display: block;
         text-align: center;
-        font-size: 35px;
     }
     .copyright, .privacy-policy, .insta {
         margin-right: 0px;
@@ -1248,17 +1418,27 @@ footer{
     }
 }
 
+@media only screen and (max-width: 820px){
+    .landing-page-smear{
+        margin-left: -130px;
+    }
+}
+
 @media only screen and (max-width: 775px){
     .landing-page-smear-container {
         margin-top: 50px;
     }
     .landing-page-description {
         margin-top: 140px;
-        font-size: 30px;
+        /* font-size: 30px; */
     }
     .bars-page-header {
         width: 80%;
-        font-size: 65px;
+        /* font-size: 65px; */
+    }
+    .salaries-slideshow-sliders-container{
+        width: 72%;
+        margin-left: 40px;
     }
     .blog-post-1:hover .blog-post-image-1,
     .blog-post-2:hover .blog-post-image-2,
@@ -1271,25 +1451,37 @@ footer{
     }
     .blog-post-distributor, 
     .blog-post-date {
-        font-size: 20px;
+        /* font-size: 20px; */
     }
     .blog-page-cta {
-        font-size: 25px;
+        /* font-size: 25px; */
     }
-
+    .social-media-message-container {
+        margin-top: 14%;
+    }
     .social-media-message {
-        margin-bottom: 50px;
+        /* margin-bottom: 50px; */
         font-size: 35px;
+    }
+    .social-media-sliders-container {
+        width: 75%;
+        margin-left: calc(25%);
+    }
+    .ras-email-address {
+        font-size: 20px;
     }
     .newletter-description, 
     .press-kit-description {
-        font-size: 30px;
-    }
-    .cta-section input {
         font-size: 25px;
     }
+    ::placeholder {
+        font-size: 20px;
+    }
+    .cta-section input {
+        font-size: 20px;
+    }
     .terms-and-copyright, .social-media-links {
-        font-size: 30px;
+        /* font-size: 30px; */
     }
 
 }
@@ -1318,15 +1510,84 @@ footer{
     }
 }
 
+@media only screen and (max-width: 700px){
+    .mobile-menu-links {
+        margin-top: 60px;
+    }
+    .mobile-menu-links > span > li {
+        margin-bottom: 30px;
+    }
+    .mobile-menu-nav-cta > li {
+        padding: 10px 0px 20px 90px;
+    }
+    .hamburger-icon-hl {
+        margin-bottom: 5px;
+    }
+    .hamburger-icon-hl-1 {
+        margin-top: 8px;
+    }
+    .hamburger-icon-container {
+        width: 40px;
+        height: 40px;
+        margin-top: 22px;
+        margin-left: 28px;  
+        margin-right: 0px;
+    }
+    .landing-page-smear {
+        margin-left: -113px;
+    }
+    .landing-page-description{
+        font-size: 20px;
+    }
+    .bars-page-header{
+        font-size: 64px;
+        margin-top: 13%;
+    }
+    .bars-page-description{
+        font-size: 20px;
+    }
+    .salaries-page-headline {
+        font-size: 72px;
+    }
+    .salaries-slideshow-profile-container {
+        font-size: 16px;
+    }
+    .blog-post-info {
+        width: 85%;
+    }
+}
+
 @media only screen and (max-width: 674px){
     .bars-page-description {
-        font-size: 30px;
+        /* font-size: 30px; */
     }
     .bars-page-cta {
-        font-size: 24px;
+        /* font-size: 24px; */
     }
     .blog-page-header-mobile {
-        font-size: 72px;
+        /* font-size: 72px; */
+    }
+    .ticker-label {
+        font-size: 16px;
+    }
+    .blog-container-label {
+        font-size: 16px;
+    }
+    .blog-post-title{
+        font-size: 32px;
+    }
+    .blog-post-distributor, 
+    .blog-post-date {
+        font-size: 16px;
+    }
+    .blog-page-cta-label{
+        margin-right: 150px;
+        font-size: 16px;
+    }
+    .blog-page-arrow{
+        width: 20px;
+        height: 20px;
+        bottom: -5px
     }
     .redorange-header-rectangle-mobile {
         height: 80px;
@@ -1336,19 +1597,39 @@ footer{
         font-size: 85px;
         margin-top: 15px;
     }
+    .social-media-ticker-label {
+        font-size: 54px;
+    }
     .social-media-message-container {
-        margin-top: 5%;
+        /* margin-top: 5%; */
     }
     .social-media-message-label-container, 
     .social-media-message-date {
-        font-size: 20px;
+        /* font-size: 20px; */
     }
     .social-media-message {
-        font-size: 30px;
+        font-size: 32px;
+    }
+    .ras-email-address {
+        font-size: 16px;
     }
     .newsletter-label, 
     .press-kit-label {
-        font-size: 70px;
+        font-size: 64px;
+    }
+    .newletter-description, 
+    .press-kit-description {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .cta-section input {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 630px){
+    .landing-page-smear {
+        margin-left: -98px;
     }
 }
 
@@ -1357,20 +1638,20 @@ footer{
         height: 75px;
         width: 100px;
     }
-    .hamburger-icon-container {
+    /* .hamburger-icon-container {
         width: 70px;
         height: 70px;
     }
     .hamburger-icon-hl-1 {
         margin-top: 15px;
-    }
-    .landing-page-smear{
-        margin-top: 60px;
-        margin-left: -69px;
+    } */
+    .landing-page-smear {
+        margin-top: 30px;
+        margin-left: -88px;
     }
     .landing-page-description {
         margin-top: 100px;
-        font-size: 25px;
+        /* font-size: 25px; */
         width: 90%;
         margin-left: 5%;
     }
@@ -1379,49 +1660,79 @@ footer{
         margin-top: 5%;
     }
     .bars-page-header {
-        font-size: 60px;
+        /* font-size: 60px; */
     }
     .bars-page-description {
-        font-size: 25px;
+        /* font-size: 25px; */
     }
     .salaries-page-headline {
-        font-size: 70px;
+        /* font-size: 70px; */
     }
     .salaries-slideshow-salary{
         font-size: 60px;
     }
     .salaries-slideshow-label {
-        font-size: 40px;
+        /* font-size: 40px; */
+    }
+    .salaries-slideshow-sliders-container {
+        width: 75%;
+        margin-left: 70px;
+    }
+    .slideshow-slider-1, 
+    .salaries-slideshow-slider-2, 
+    .salaries-slideshow-slider {
+        margin-right: 20px;
     }
     .blog-post-distributor, 
     .blog-post-date {
-        font-size: 18px;
+        /* font-size: 18px; */
     }
     .blog-post-title {
-        font-size: 30px;
+        /* font-size: 30px; */
+    }
+    .social-media-slider-1, 
+    .social-media-slider-2, 
+    .social-media-slider {
+        margin-right: 20px;
     }
     .footer-logo {
         width: 80px;
         height: 80px;
     }
     .ras-email-address {
-        font-size: 20px;
+        /* font-size: 20px; */
     }
     .newsletter-label, 
     .press-kit-label {
-        font-size: 60px;
+        /* font-size: 60px; */
     }
     .newletter-description, 
     .press-kit-description {
-        font-size: 24px;
+        /* font-size: 24px; */
     }
     .terms-and-copyright, 
     .social-media-links {
-        font-size: 25px;
+        /* font-size: 25px; */
     }
 }
 
 @media only screen and (max-width: 540px){
+    .landing-page-smear {
+        margin-left: -98px;
+    }
+    .bars-page-container {
+        margin-top: 15%;
+        height: 90%;
+    }
+    .salaries-page-database-label {
+        font-size: 16px;
+    }
+    .salaries-slideshow-label {
+        font-size: 35px;
+    }
+    .salaries-page-headline {
+        font-size: 60px;
+    }
     .redorange-header-rectangle-1-mobile, 
     .redorange-header-rectangle-5-mobile {
         width: 20px;
@@ -1430,14 +1741,36 @@ footer{
     .redorange-header-rectangle-7-mobile {
         width: 100px;
     }
+    .social-media-message-box-label {
+        font-size: 16px;
+    }
 }
 
-@media only screen and (max-width: 474px){
+@media only screen and (max-width: 520px){
+    .mobile-menu-nav-cta > li {
+        margin-top: 0px;
+        padding: 10px 0px 20px 50px;
+    }
+    .landing-page-smear {
+        margin-left: -84px;
+    }
+    .bars-page-header {
+        font-size: 54px;
+    }
     .bars-page-description {
-        font-size: 20px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 475px){
+    .mobile-menu-nav-cta > li {
+        padding: 10px 0px 20px 35px;
+    }
+    .bars-page-description {
+        /* font-size: 20px; */
     }
     .bars-page-cta {
-        font-size: 20px;
+        /* font-size: 20px; */
     }
     .salaries-slideshow-label-span {
         flex-direction: column-reverse;
@@ -1456,23 +1789,46 @@ footer{
         font-size: 70px;
         margin-top: 31px;
     }
+    .redorange-header-rectangle-mobile {
+        height: 70px;
+        margin-top: 62px;
+    }
     .social-media-message {
-        font-size: 25px;
+        font-size: 30px;
     }
     .ras-email-address {
-        font-size: 16px;
+        /* font-size: 16px; */
     }
     .cta-section input {
-        font-size: 20px;
+        /* font-size: 20px; */
     }
     ::placeholder{
-        font-size: 20px;
+        /* font-size: 20px; */
     }
     .newletter-description, 
     .press-kit-description {
-        font-size: 20px;
+        /* font-size: 20px; */
     }
 }
+
+@media only screen and (max-width: 444px){
+    .mobile-menu-nav-cta > li {
+        padding: 10px 0px 20px 15px;
+    }
+    .landing-page-smear {
+        margin-left: -71px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .landing-page-br{
+        display: none;
+    }
+    .mobile-menu-nav-cta > li {
+        padding: 10px 15px 20px 15px;
+    }
+}
+
 
 @media only screen and (max-width: 404px){
     .mobile-menu-icon {
@@ -1482,23 +1838,66 @@ footer{
         margin-left: 20px;
     }
     .salaries-page-database-label {
-        font-size: 25px;
+        /* font-size: 25px; */
     }
     .salaries-page-headline {
-        font-size: 60px;
+        /* font-size: 60px; */
+    }
+    .salaries-slideshow-sliders-container {
+        width: 90%;
+        margin-left: 52px;
+    }
+    .slideshow-slider-1, 
+    .salaries-slideshow-slider-2, 
+    .salaries-slideshow-slider {
+        margin-right: 15px;
+    }
+    .social-media-message-label-container, 
+    .social-media-message-date {
+        font-size: 14px;
+    }
+    .social-media-message {
+        font-size: 25px;
+    }
+    .social-media-message-container {
+        margin-top: 20%;
+    }
+    .social-media-sliders-container {
+        width: 83%;
+        margin-left: calc(22%);
+    }
+    .ras-email-address {
+        font-size: 14px;
     }
     .mobile-menu-links > span > li {
         font-size: 16px;
     }
+    .mobile-menu-links {
+        margin-top: 80px;
+    }
+    .mobile-menu-links > span > li {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .mobile-menu-nav-cta > li {
+        padding: 10px 0px 20px 24px;
+    }
 }
 
 @media only screen and (max-width: 380px){
+    .landing-page-smear {
+        margin-left: -60px;
+    }
     .ras-email-address {
-        font-size: 14px;
+        /* font-size: 14px; */
+    }
+    .salaries-page-headline {
+        font-size: 54px;
     }
     .blog-page-header-mobile {
         font-size: 60px;
-        margin-top: 45px;
+        margin-top: 46px;
+        height: 40px;
     }
     .redorange-header-rectangle-mobile {
         height: 60px;
@@ -1512,22 +1911,31 @@ footer{
     .redorange-header-rectangle-7-mobile {
         width: 70px;
     }
-    .blog-page-cta {
+    /* .blog-page-cta {
         width: 240px;
         padding: 0px 0px 10px 25px;
-    }
+    } */
     .cta-section input {
         width: 80%;
     }
+    .mobile-menu-nav-cta > li {
+        padding: 10px 24px 20px 24px;
+    }
 }
 
-@media only screen and (max-height: 1050px){
+@media only screen and (min-height: 900px){
+    .salaries-page{
+        margin-top: -120px;
+    }
+}
+
+@media only screen and (min-height: 875px) and (max-height: 1050px){
     .mobile-menu-nav-cta > li{
         margin-top: 70px;
     }
 }
 
-@media only screen and (max-height: 900px){
+@media only screen and (min-width: 650px) and (max-height: 900px){
     .mobile-menu-nav-cta > li {
         margin-top: 20px;
     }
@@ -1556,5 +1964,186 @@ footer{
     .mobile-menu-links > span > li {
         font-size: 20px;
         margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-height: 760px){
+    /* .landing-page-smear{
+        margin-top: 60px;
+    }
+    .landing-page-description {
+        margin-top: 120px;
+    } */
+    .bars-page-header{
+        margin-top: 7%;
+    }
+}
+
+@media only screen and (min-width: 301px)
+                   and (max-width: 341px)
+                   and (min-height: 540px)
+                   and (max-height: 580px){
+    .mobile-menu-logo {
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    .mobile-menu-header a {
+        margin-top: 50px;
+        margin-right: 20px;
+        width: 45px;
+        height: 36px;
+    }
+    a .mobile-menu-close-button {
+        padding: 0px 0px 4px 11px;
+        font-size: 20px;
+    }
+    .mobile-menu-links {
+        margin-top: 60px;
+    }
+    .mobile-menu-links > span > li {
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+    .mobile-menu-nav-cta > li {
+        margin-top: 40px;
+        padding: 10px 10px;
+        width: 70%;
+    }
+    .page{
+        overflow-x: hidden;
+    }
+    .bars-page{
+        overflow-x: initial;
+    }
+    .bars-page-header {
+        font-size: 34px;
+    }
+    .bars-page-description {
+        font-size: 14px;
+    }
+    .bars-page-cta {
+        width: 170px;
+        font-size: 13px;
+    }
+    .salaries-page-headline {
+        font-size: 44px;
+    }
+    .slideshow-arrow {
+        margin-top: 43px;
+    }
+    .blog-page-cta {
+        width: 240px;
+        padding: 7px 0px 13px 30px;
+        font-size: 16px;
+    }
+    .blog-page-cta-label {
+        margin-right: 113px;
+        font-size: 16px;
+    }
+    .ras-email-address {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 340px)
+                   and (max-width: 380px)
+                   and (min-height: 620px)
+                   and (max-height: 670px){
+    .mobile-menu-logo {
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    .mobile-menu-header a {
+        margin-top: 50px;
+        margin-right: 20px;
+        width: 45px;
+        height: 36px;
+    }
+    a .mobile-menu-close-button {
+        padding: 0px 0px 4px 11px;
+        font-size: 20px;
+    }
+    .mobile-menu-links {
+        margin-top: 90px;
+    }
+    .mobile-menu-links > span > li {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .mobile-menu-nav-cta > li {
+        margin-top: 40px;
+        padding: 10px 10px 10px 50px;
+        width: 70%;
+    }
+    .page{
+        overflow-x: hidden;
+    }
+    .salaries-page-database-label {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (min-width: 340px)
+                   and (max-width: 380px)
+                   and (min-height: 720px)
+                   and (max-height: 960px){
+    .page{
+        overflow-x: hidden;
+    }
+    .landing-page-smear {
+        margin-top: 95px;
+        margin-left: -59px;
+    }
+    .landing-page-description {
+        margin-top: 170px;
+    }
+    .bars-page-header {
+        margin-top: 28%;
+    }
+    .salaries-page-database-label {
+        margin-top: 40px;
+    }
+    .mobile-menu-links {
+        margin-top: 100px;
+    }
+    .mobile-menu-links > span > li {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (min-width: 370px)
+                   and (max-width: 380px){
+    .page{
+        overflow-x: hidden;
+    }
+    .redorange-header-rectangle-1-mobile, 
+    .redorange-header-rectangle-5-mobile {
+        width: 31px;
+    }
+    .redorange-header-rectangle-3-mobile, 
+    .redorange-header-rectangle-7-mobile {
+        width: 120px;
+    }
+}
+
+@media only screen and (min-width: 391px)
+                   and (max-width: 491px)
+                   and (min-height: 710px)
+                   and (max-height: 860px){
+    .mobile-menu-nav-cta > li {
+        margin-top: 0px;
+    }
+    .landing-page-smear {
+        margin-top: 70px;
+    }
+    .landing-page-description {
+        margin-top: 160px;
+    }
+    .bars-page-header {
+        margin-top: 16%;
+    }
+    .slideshow-arrow {
+        margin-top: 44px;
     }
 }

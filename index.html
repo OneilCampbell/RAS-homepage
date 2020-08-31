@@ -24,8 +24,8 @@
                 <span>
                     <li>Contact</li> 
                 </span>
-                <span class="landing-page-nav-cta"> 
-                    <li>Add my Salary</li> 
+                <span class="highlight landing-page-nav-cta"> 
+                    <li>Add My Salary</li> 
                 </span>
             </ul>
             <a href="#mobile-menu" class="mobile-menu-icon">
@@ -56,8 +56,8 @@
             <span>
                 <li>Contact</li> 
             </span>
-            <span class="mobile-menu-nav-cta"> 
-                <li>Add my Salary</li> 
+            <span class="highlight mobile-menu-nav-cta"> 
+                <li>Add My Salary</li> 
             </span>
         </ul>
     </div>
@@ -70,7 +70,7 @@
         </div>
         <p class="landing-page-description">
             We're revealing real salaries in real time. 
-            <br/> 
+            <br class="landing-page-br"/> 
             Let's find out what you're worth.
         </p>
     </div>
@@ -86,15 +86,16 @@
                     and we're not stopping any time soon. We rely on real data from
                     real professionals - just like you. Anonymously share your salary
                     with us and you'll help women and people of color know their worth
+                    and ask for fair pay.
                 </p>
-                <a class="cta bars-page-cta" href="#">Add my salary</a>
+                <a class="highlight cta bars-page-cta" href="#">Add My Salary</a>
             </div>
             <img class="bar-grouping" src="Assets/Images/bar-grouping.png" alt="bar graph" />
         </div>
     </div>
 
     <div class="page salaries-page">
-        <h5 class="salaries-page-database-label">Salary database</h5>
+        <h5 class="salaries-page-database-label">Salary Database</h5>
         <h2 class="salaries-page-headline"> 
             <span id="job-title" class="make-redorange">Junior Art Directors</span> <!-- DYNAMIC DATA --> 
             in 
@@ -106,54 +107,63 @@
             <div class="salaries-page-slideshow-vertical-bar"></div>
             <div class="salaries-page-slideshow-averages-container">
                 <span class="salaries-slideshow-label-span">
-                    <div class="salaries-slideshow-lowest">
-                        <p id="lowest-salary" class="salaries-slideshow-salary">$18,700</p> <!-- DYNAMIC DATA --> 
+                    <div class="salaries-slideshow-highest">
+                        <h4 class="salaries-slideshow-label">Highest Salary</h4>
+                        <div class="salaries-slideshow-arrow-container">
+                            <p id="highest-salary" class="salaries-slideshow-salary">$134,700</p> <!-- DYNAMIC DATA --> 
+                            <img class="slideshow-arrow" src="./Assets/Images/up.png" alt="arrow" />
+                        </div>
                         <div class="salaries-slideshow-profile-container">
                             <p class="salaries-slideshow-profile-label">
                                 Based on 
                                 <span class="slideshow-profile-number">554</span> <!-- DYNAMIC DATA --> 
                                 profiles
                             </p>
-                            <img class="slideshow-arrow" src="./Assets/Images/slideshow-arrow.png" alt="arrow" />
+                            <p class="salaries-slideshow-profile-hover hover-highest">Click to see</p>
                         </div>
                     </div>
-                    <h4 class="salaries-slideshow-label">Lowest <br class="salaries-slideshow-label-br"/> Salary</h4>
                 </span>
                 <span class="salaries-slideshow-label-span">
                     <div class="salaries-slideshow-average">
-                        <p id="average-salary" class="salaries-slideshow-salary">$59,700</p> <!-- DYNAMIC DATA --> 
+                        <h4 class="salaries-slideshow-label">Average Salary</h4>
+                        <div class="salaries-slideshow-arrow-container">
+                            <p id="average-salary" class="salaries-slideshow-salary">$59,700</p> <!-- DYNAMIC DATA -->
+                            <img class="slideshow-arrow" src="./Assets/Images/horizontal.png" alt="arrow" />
+                        </div> 
                         <div class="salaries-slideshow-profile-container">
                             <p class="salaries-slideshow-profile-label">
                                 Based on 
                                 <span class="slideshow-profile-number">554</span> <!-- DYNAMIC DATA --> 
                                 profiles
                             </p>
-                            <img class="slideshow-arrow" src="./Assets/Images/slideshow-arrow.png" alt="arrow" />
+                            <p class="salaries-slideshow-profile-hover hover-average">Click to see</p>
                         </div>
                     </div>
-                    <h4 class="salaries-slideshow-label">Average <br class="salaries-slideshow-label-br"/> Salary</h4>
                 </span>
                 <span class="salaries-slideshow-label-span">
-                    <div class="salaries-slideshow-highest">
-                        <p id="highest-salary" class="salaries-slideshow-salary">$134,700</p> <!-- DYNAMIC DATA --> 
+                    <div class="salaries-slideshow-lowest">
+                        <h4 class="salaries-slideshow-label">Lowest Salary</h4>
+                        <div class="salaries-slideshow-arrow-container">
+                            <p id="lowest-salary" class="salaries-slideshow-salary">$18,700</p> <!-- DYNAMIC DATA -->
+                            <img class="slideshow-arrow" src="./Assets/Images/down.png" alt="arrow" />
+                        </div> 
                         <div class="salaries-slideshow-profile-container">
                             <p class="salaries-slideshow-profile-label">
                                 Based on 
                                 <span class="slideshow-profile-number">554</span> <!-- DYNAMIC DATA --> 
                                 profiles
                             </p>
-                            <img class="slideshow-arrow" src="./Assets/Images/slideshow-arrow.png" alt="arrow" />
+                            <p class="salaries-slideshow-profile-hover hover-lowest">Click to see</p>
                         </div>
                     </div>
-                    <h4 class="salaries-slideshow-label">Highest <br class="salaries-slideshow-label-br"/> Salary</h4>
                 </span>
             </div>
         </div>
         <div class="salaries-slideshow-sliders-container">
-            <div id="salary-slider-0" class="salaries-slideshow-slider salaries-slideshow-slider-1"></div>
-            <div id="salary-slider-1" class="salaries-slideshow-slider salaries-slideshow-slider-2 salaries-slideshow-slider-active"></div>
-            <div id="salary-slider-2" class="salaries-slideshow-slider salaries-slideshow-slider-3"></div>
-            <div id="salary-slider-3" class="salaries-slideshow-slider salaries-slideshow-slider-4"></div>
+            <div id="salary-slider-0" class="highlight salaries-slideshow-slider salaries-slideshow-slider-1"></div>
+            <div id="salary-slider-1" class="highlight salaries-slideshow-slider salaries-slideshow-slider-2 salaries-slideshow-slider-active"></div>
+            <div id="salary-slider-2" class="highlight salaries-slideshow-slider salaries-slideshow-slider-3"></div>
+            <div id="salary-slider-3" class="highlight salaries-slideshow-slider salaries-slideshow-slider-4"></div>
         </div>
     </div>
 
@@ -296,7 +306,7 @@
                 </div>
             </div>
         </div>
-        <div class="cta blog-page-cta">
+        <div class="highlight cta blog-page-cta">
             <p class="blog-page-cta-label">View all</p>
             <img class="blog-page-arrow" src="./Assets/Images/ticker-arrow.png" alt="arrow" />
         </div>
@@ -349,10 +359,10 @@
             <img class="social-media-message-box-mobile" src="Assets/Images/Scoial Media Message.png" alt="message box icon" />
         </div>
         <div class="social-media-sliders-container">
-            <div id="social-media-slider-0" class="social-media-slider social-media-slider-1"></div>
-            <div id="social-media-slider-1" class="social-media-slider social-media-slider-2 social-media-slider-active"></div>
-            <div id="social-media-slider-2" class="social-media-slider social-media-slider-3"></div>
-            <div id="social-media-slider-3" class="social-media-slider social-media-slider-4"></div>
+            <div id="social-media-slider-0" class="highlight social-media-slider social-media-slider-1"></div>
+            <div id="social-media-slider-1" class="highlight social-media-slider social-media-slider-2 social-media-slider-active"></div>
+            <div id="social-media-slider-2" class="highlight social-media-slider social-media-slider-3"></div>
+            <div id="social-media-slider-3" class="highlight social-media-slider social-media-slider-4"></div>
         </div>
     </div>
 
@@ -375,7 +385,7 @@
                 </div>
             </div>
             <div class="press-kit-download">
-                <h2 class="press-kit-label">Press kit</h2>
+                <h2 class="press-kit-label">Press Kit</h2>
                 <p class="press-kit-description">
                     Want facts, figures, and everything in between?
                     Need them fast? Download our press kit.
@@ -387,7 +397,7 @@
             <div class="terms-and-copyright">
                 <p class="copyright">@ Real Agency Salaries 2020</p>
                 <p class="footer-links privacy-policy">Privacy Policy</p>
-                <p class="footer-links terms-and-conditions">Terms & conditions</p>
+                <p class="footer-links terms-and-conditions">Terms & Conditions</p>
             </div>
             <div class="social-media-links">
                 <p class="footer-links insta">Instagram</p>
