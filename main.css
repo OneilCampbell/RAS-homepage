@@ -206,6 +206,7 @@ li:hover{
     text-align: center;
     font-family: 'Maison Neue Medium';
     font-size: 16px;
+    line-height: 24px;
 }
 
 /**************************************************************** 
@@ -237,8 +238,9 @@ li:hover{
     font-weight: 700;
     font-style: normal;
     font-size: 72px;
-    margin: 5% 0px 20px 20%;
+    margin: 5% 0px 20px 12%;
     text-transform: uppercase;
+    line-height: 64px;
 }
 
 .bars-page-hr{
@@ -248,7 +250,7 @@ li:hover{
 
 .bars-page-hr, .bars-page-description{
     width: 60%;
-    margin: 0 20%;
+    margin: 0 12%;
 }
 
 .bars-page-description{
@@ -279,11 +281,11 @@ li:hover{
 
 .bars-page-cta{
     display: block;
-    width: 220px;
+    width: 330px;
     margin-top: 30px;
     border: solid 6px #FD6757;
-    padding: 10px 20px;
-    margin-left: 20%;
+    padding: 15px 25px 20px 25px;
+    margin-left: 12%;
     background: linear-gradient(to right, #FD6757 50%, black 50%);
     background-size: 200% 100%;
     background-position:right bottom;
@@ -309,19 +311,20 @@ li:hover{
 }
 
 .salaries-page-headline{
-    font-family: obviously-condensed, sans-serif;
-    font-weight: 300;
+    font-family: "Maison Neue Bold";
+    font-weight: 600;
     font-style: normal;
     font-size: 72px;
     width: 80%;
     margin-left: 5%;
     margin-top: 0px;
     line-height: 72px;
+    letter-spacing: -3px;
 }
 
 .make-redorange{
-    font-family: obviously-condensed, sans-serif;
-    font-weight: 500;
+    font-family: "Maison Neue Bold";
+    font-weight: 600;
     font-style: normal;
     color: #FD6757;
 }
@@ -357,6 +360,12 @@ li:hover{
 
 .salaries-slideshow-lowest{
     width: 40%;
+    background:rgba(131, 87, 252, .15);
+    color: rgb(131, 87, 252);
+}
+
+.salaries-slideshow-poc{
+    width: 30%;
     background:rgba(253, 103, 87, .15);
     color: #FD6757;
 }
@@ -374,12 +383,14 @@ li:hover{
 }
 
 .salaries-slideshow-lowest:hover,
+.salaries-slideshow-poc:hover,
 .salaries-slideshow-average:hover,
 .salaries-slideshow-highest:hover{
     cursor: pointer;
 }
 
 .salaries-slideshow-lowest,
+.salaries-slideshow-poc,
 .salaries-slideshow-average,
 .salaries-slideshow-highest{
     /* height: 25%; */
@@ -387,7 +398,8 @@ li:hover{
 }
 
 .salaries-slideshow-highest,
-.salaries-slideshow-average{
+.salaries-slideshow-average,
+.salaries-slideshow-lowest{
     margin-bottom: 4%;
 }
 
@@ -419,6 +431,10 @@ li:hover{
 }
 
 .salaries-slideshow-lowest:hover .hover-lowest{
+    display: block;
+}
+
+.salaries-slideshow-poc:hover .hover-poc{
     display: block;
 }
 
@@ -622,6 +638,10 @@ li:hover{
     background: black;
 }
 
+.blog-post-hl-1{
+    display: none;
+}
+
 .blog-post{
     width: 100%;
     margin-bottom: 40px;
@@ -632,9 +652,23 @@ li:hover{
     cursor: pointer;
 }
 
+.blog-post-1{
+    height: 400px;
+}
+
 .blog-post-image{
     width: 0px;
     /* height: auto; */
+}
+
+.blog-post-image-1{
+    width: 50%;
+}
+
+.blog-post-info-container{
+    background: #B6D1DC;
+    width: 50%;
+    padding: 10px 10px 10px 0px;
 }
 
 .blog-post-last{
@@ -647,7 +681,6 @@ li:hover{
     }
 }
 
-.blog-post-1:hover .blog-post-image-1,
 .blog-post-2:hover .blog-post-image-2,
 .blog-post-3:hover .blog-post-image-3,
 .blog-post-last:hover .blog-post-image-last{
@@ -656,7 +689,6 @@ li:hover{
     animation: grow 1s ease forwards;
 }
 
-.blog-post-1:hover .blog-post-hl-1,
 .blog-post-2:hover .blog-post-hl-2,
 .blog-post-3:hover .blog-post-hl-3,
 .blog-post-last:hover .blog-post-hl-last{
@@ -665,6 +697,12 @@ li:hover{
 
 .blog-post-info{
     width: 99%;
+}
+
+.blog-post-info-1{
+    background: white;
+    width: 100%;
+    height: calc(100%);
 }
 
 .blog-post-distributor,
@@ -688,6 +726,36 @@ li:hover{
 .blog-post-date{
     font-family: 'Maison Neue Book';
     font-size: 16px;
+}
+
+.blog-post-distributor-1,
+.blog-post-date-1,
+.blog-post-title-1{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.blog-post-distributor-1{
+    padding-top: 50px;
+    margin-bottom: 10px;
+}
+
+.blog-post-title-1{
+    margin-bottom: 36px;
+}
+
+.blog-post-date-1{
+    margin-bottom: 68px;
+}
+
+.blog-post-1-cta{
+    color: #FD6757;
+    font-family: obviously-wide, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    margin: 0px;
+    padding-left: 5%;
 }
 
 .blog-page-cta{
@@ -1009,7 +1077,7 @@ footer{
 
 /**************************************************************** 
 -----------------------------------------------------------------
-                            MEDIA QUERIES
+                    HOMEPAGE MEDIA QUERIES
 -----------------------------------------------------------------
 *****************************************************************/
 
@@ -1255,11 +1323,13 @@ footer{
     }
 
     .salaries-slideshow-lowest,
-    .salaries-slideshow-average{
+    .salaries-slideshow-average
+    .salaries-slideshow-poc{
         width: 70%;
     }
 
     .salaries-slideshow-lowest:hover .hover-lowest,
+    .salaries-slideshow-poc:hover .hover-poc
     .salaries-slideshow-average:hover .hover-average,
     .salaries-slideshow-highest:hover .hover-highest{
         display: none;
@@ -2145,5 +2215,400 @@ footer{
     }
     .slideshow-arrow {
         margin-top: 44px;
+    }
+}
+
+
+
+
+/**************************************************************************************************** 
+-----------------------------------------------------------------------------------------------------
+||||||||||||||||||||||||||||                ABOUT PAGE               ||||||||||||||||||||||||||||||||
+-----------------------------------------------------------------------------------------------------
+*****************************************************************************************************/
+
+.about-page-header {
+    background: white;
+}
+
+.about-page-landing-page-nav-cta {
+    border-color: #FD6757;
+    background: white;
+}
+
+.about-page-landing-page-nav-cta > li {
+    color: black;
+}
+
+.about-page-hamburger-icon-container {
+    border-color: #FD6757;
+}
+
+.about-page-hamburger-icon-hl {
+    border-color: black;
+}
+
+.about-page-content {
+    position: relative;
+    margin-top: 123px;
+    padding: 40px 80px;
+}
+
+.mission-statement {
+    font-family: obviously-wide, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0px;
+}
+
+.main-header {
+    margin-top: 40px;
+    font-family: obviously-condensed, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 72px;
+    line-height: 70px;
+    letter-spacing: 0px;
+}
+
+.main-header-text,
+.secondary-header-text {
+    font-family: 'Maison Neue Medium';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 24px;
+}
+
+.secondary-header {
+    font-family: 'Maison Neue Bold';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+
+.main-header-text,
+.secondary-header,
+.secondary-header-text {
+    padding-left: 110px;
+    width: 50%;
+}
+
+.team-container-header {
+    font-family: obviously-condensed, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 72px;
+    line-height: 70px;
+    letter-spacing: 0px;
+}
+
+.team-container-hl {
+    height: 10px;
+    background: black;
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    columns: 3;
+}
+
+.team-member {
+    height: 617px;
+    margin-bottom: 40px;
+    margin-right: 10px;
+}
+
+.team-member > hr {
+    height: 4px;
+    background: black;
+}
+
+.team-member > h4 {
+    margin: 10px 0px;
+    font-family: obviously-wide, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0px;
+}
+
+.team-member > p {
+    margin: 0px;
+    font-family: 'Maison Neue Medium';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 24px;
+}
+
+
+/**************************************************************** 
+-----------------------------------------------------------------
+                    ABOUT PAGE MEDIA QUERIES
+-----------------------------------------------------------------
+*****************************************************************/
+
+
+@media only screen and (max-width: 1390px){
+    .team-container {
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .about-page-content {
+        padding: 40px 20px 60px;
+    }
+
+    .main-header,
+    .team-container-header {
+        font-size: 54px;
+        line-height: 50px;
+    }
+
+    .secondary-header {
+        font-size: 32px;
+        line-height: 38px;
+        letter-spacing: -1.6px;
+    }
+
+    .main-header-text,
+    .secondary-header,
+    .secondary-header-text {
+        padding-left: 0px;
+        width: 100%;
+    }
+
+    .team-container-hl {
+        display: none;
+    }
+
+    .team-container{
+        display: block;
+        columns: 1;
+    }
+
+    .team-member {
+        height: auto;
+        margin-bottom: 20px;
+        margin-right: 0px;
+    }
+
+    .team-member > img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+/**************************************************************************************************** 
+-----------------------------------------------------------------------------------------------------
+||||||||||||||||||||||||||||                BLOG PAGE               ||||||||||||||||||||||||||||||||
+-----------------------------------------------------------------------------------------------------
+*****************************************************************************************************/
+
+.blog-page-content {
+    position: relative;
+    margin-top: 123px;
+    padding: 60px 80px;
+}
+
+.blog-page-post-4 {
+    height: 400px;
+}
+
+.blog-page-post-image-4 {
+    width: 50%;
+}
+
+.blog-post-info-container-4{
+    background: #F7B383;
+}
+
+.blog-post-info-1,
+.blog-post-info-4 {
+    background: white;
+    width: 100%;
+    height: calc(100%);
+}
+
+.blog-post-distributor-4, 
+.blog-post-date-4, 
+.blog-post-title-4 {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.blog-post-distributor-4 {
+    padding-top: 50px;
+    margin-bottom: 10px;
+}
+
+.blog-post-title-4 {
+    margin-bottom: 36px;
+}
+
+.blog-post-date-4 {
+    margin-bottom: 68px;
+}
+
+.blog-post-4-cta {
+    color: #FD6757;
+    font-family: obviously-wide, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    margin: 0px;
+    padding-left: 5%;
+}
+
+.get-involved-container {
+    width: 230px;
+    height: 114px;
+    padding: 20px 30px 30px;
+    background: black;
+    position: absolute;
+    bottom: -94px;
+    right: 0;
+    z-index: 5;
+    color: white;
+}
+
+.get-involved-text-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.get-involved-message {
+    font-family: 'Maison Neue Medium';
+    font-weight: 500;
+}
+
+.get-involved-close-button{
+    font-family: 'Maison Neue Medium';
+    font-weight: bold;
+    font-size: 20px;
+    margin: 16px 0px;
+}
+
+.get-involved-cta {
+    width: 230px;
+    height: 60px;
+    background: transparent;
+    border: 4px solid #FD6757;
+    font-size: 16px;
+    line-height: 18.75px;
+    font-weight: bold;
+    font-family: obviously-wide, sans-serif;
+    color: white;
+}
+
+
+/**************************************************************** 
+-----------------------------------------------------------------
+                    BLOG PAGE MEDIA QUERIES
+-----------------------------------------------------------------
+*****************************************************************/
+
+
+@media only screen and (max-width: 1089px) {
+    .blog-post-title-1,
+    .blog-post-title-4 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 857px) {
+    .blog-post-title-1,
+    .blog-post-title-4 {
+        font-size: 25px;
+    }
+
+    .blog-post-distributor-1, 
+    .blog-post-distributor-4, 
+    .blog-post-date-1,
+    .blog-post-date-4 {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .blog-page-content {
+        padding: 60px 40px;
+    }
+    .blog-post-1,
+    .blog-post-4 {
+        height: auto;
+        display: block;
+    }
+
+    .blog-post-image-1,
+    .blog-post-image-4 {
+        width: 100%;
+    }
+
+    .blog-post-info-container {
+        width: auto;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .blog-post-distributor-1, 
+    .blog-post-distributor-4{
+        padding-top: 30px;
+    }
+
+    .blog-post-distributor-1, 
+    .blog-post-distributor-4, 
+    .blog-post-date-1, 
+    .blog-post-date-4 {
+        font-size: 20px;
+    }
+
+    .blog-post-title-1, 
+    .blog-post-title-4 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .blog-post-1-cta,
+    .blog-post-4-cta{
+        padding-bottom: 30px;
+    }
+
+    .blog-post-date-1,
+    .blog-post-date-4 {
+        margin-bottom: 50px;
+    }
+
+}
+
+
+@media only screen and (max-width: 674px){
+    .blog-page-content {
+        padding: 60px 20px;
+    }
+    .blog-post-title-1, 
+    .blog-post-title-4 {
+        font-size: 32px;
+    }
+    .blog-post-distributor-1, 
+    .blog-post-distributor-4, 
+    .blog-post-date-1,
+    .blog-post-date-4 {
+        font-size: 16px;
     }
 }

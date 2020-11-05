@@ -7,13 +7,13 @@
     <link type="text/css" rel="stylesheet" href="./main.css"/>
     <title>Real Agency Salaries</title>
 </head>
-<body>
+<body id="home">
     <header>
         <nav>
             <img class="nav-logo" src="Assets/Images/nav-logo.png" alt="Real Agency Salaries" />
             <ul>
                 <span> 
-                    <li>Salary Database</li> 
+                    <li>Search Salaries</li> 
                 </span>
                 <span> 
                     <li>About</li> 
@@ -25,7 +25,7 @@
                     <li>Contact</li> 
                 </span>
                 <span class="highlight landing-page-nav-cta"> 
-                    <li>Add My Salary</li> 
+                    <li>Personal Salary Report</li> 
                 </span>
             </ul>
             <a href="#mobile-menu" class="mobile-menu-icon">
@@ -45,7 +45,7 @@
         </div>
         <ul class="mobile-menu-links">
             <span> 
-                <li>Salary Database</li> 
+                <li>Search Salaries</li> 
             </span>
             <span> 
                 <li>About</li> 
@@ -57,7 +57,7 @@
                 <li>Contact</li> 
             </span>
             <span class="highlight mobile-menu-nav-cta"> 
-                <li>Add My Salary</li> 
+                <li>Personal Salary Report</li> 
             </span>
         </ul>
     </div>
@@ -66,11 +66,13 @@
     
     <div class="page landing-page">
         <div class="landing-page-smear-container">
-            <img class="landing-page-smear" src="./Assets/Images/landing-page-smear.png" alt="Making The Unseen Seen" />
+            <img class="landing-page-smear" src="./Assets/Images/landing-page-smear.gif" alt="Making The Unseen Seen" />
         </div>
         <p class="landing-page-description">
             We're revealing real salaries in real time. 
             <br class="landing-page-br"/> 
+            Get an in-depth analysis of your salary, personalized for you
+            <br/>
             Let's find out what you're worth.
         </p>
     </div>
@@ -78,24 +80,25 @@
     <div class="page bars-page">
         <div class="bars-page-container">
             <div class="bars-page-description-container">
-                <h1 class="bars-page-header">The time is now</h1>
+                <h1 class="bars-page-header">Does your salary <br/> add up?</h1>
                 <hr class="bars-page-hr" />
                 <p class="bars-page-description">
                     Real Agency Salaries exists to make agency pay transparent.
                     We're uncovering information that's been hidden for too long,
-                    and we're not stopping any time soon. We rely on real data from
-                    real professionals - just like you. Anonymously share your salary
-                    with us and you'll help women and people of color know their worth
-                    and ask for fair pay.
+                    and we're not stopping any time soon. Anonymously share your 
+                    salary and get a real analysis of what you’re worth based on 
+                    real data from real professionals. Everyone should be empowered 
+                    to ask for what they deserve. Get your Personal Salary Report 
+                    and know your worth.
                 </p>
-                <a class="highlight cta bars-page-cta" href="#">Add My Salary</a>
+                <a class="highlight cta bars-page-cta" href="#">Personal Salary Report</a>
             </div>
             <img class="bar-grouping" src="Assets/Images/bar-grouping.png" alt="bar graph" />
         </div>
     </div>
 
     <div class="page salaries-page">
-        <h5 class="salaries-page-database-label">Salary Database</h5>
+        <h5 class="salaries-page-database-label">Bias Snapshot</h5>
         <h2 class="salaries-page-headline"> 
             <span id="job-title" class="make-redorange">Junior Art Directors</span> <!-- DYNAMIC DATA --> 
             in 
@@ -108,10 +111,10 @@
             <div class="salaries-page-slideshow-averages-container">
                 <span class="salaries-slideshow-label-span">
                     <div class="salaries-slideshow-highest">
-                        <h4 class="salaries-slideshow-label">Highest Salary</h4>
+                        <h4 class="salaries-slideshow-label">White Men</h4>
                         <div class="salaries-slideshow-arrow-container">
                             <p id="highest-salary" class="salaries-slideshow-salary">$134,700</p> <!-- DYNAMIC DATA --> 
-                            <img class="slideshow-arrow" src="./Assets/Images/up.png" alt="arrow" />
+                            <!-- <img class="slideshow-arrow" src="./Assets/Images/up.png" alt="arrow" /> -->
                         </div>
                         <div class="salaries-slideshow-profile-container">
                             <p class="salaries-slideshow-profile-label">
@@ -128,7 +131,7 @@
                         <h4 class="salaries-slideshow-label">Average Salary</h4>
                         <div class="salaries-slideshow-arrow-container">
                             <p id="average-salary" class="salaries-slideshow-salary">$59,700</p> <!-- DYNAMIC DATA -->
-                            <img class="slideshow-arrow" src="./Assets/Images/horizontal.png" alt="arrow" />
+                            <!-- <img class="slideshow-arrow" src="./Assets/Images/horizontal.png" alt="arrow" /> -->
                         </div> 
                         <div class="salaries-slideshow-profile-container">
                             <p class="salaries-slideshow-profile-label">
@@ -142,10 +145,10 @@
                 </span>
                 <span class="salaries-slideshow-label-span">
                     <div class="salaries-slideshow-lowest">
-                        <h4 class="salaries-slideshow-label">Lowest Salary</h4>
+                        <h4 class="salaries-slideshow-label">Women</h4>
                         <div class="salaries-slideshow-arrow-container">
                             <p id="lowest-salary" class="salaries-slideshow-salary">$18,700</p> <!-- DYNAMIC DATA -->
-                            <img class="slideshow-arrow" src="./Assets/Images/down.png" alt="arrow" />
+                            <!-- <img class="slideshow-arrow" src="./Assets/Images/down.png" alt="arrow" /> -->
                         </div> 
                         <div class="salaries-slideshow-profile-container">
                             <p class="salaries-slideshow-profile-label">
@@ -154,6 +157,23 @@
                                 profiles
                             </p>
                             <p class="salaries-slideshow-profile-hover hover-lowest">Click to see</p>
+                        </div>
+                    </div>
+                </span>
+                <span class="salaries-slideshow-label-span">
+                    <div class="salaries-slideshow-poc">
+                        <h4 class="salaries-slideshow-label">People Of Color</h4>
+                        <div class="salaries-slideshow-arrow-container">
+                            <p id="poc-salary" class="salaries-slideshow-salary">$18,700</p> <!-- DYNAMIC DATA -->
+                            <!-- <img class="slideshow-arrow" src="./Assets/Images/down.png" alt="arrow" /> -->
+                        </div> 
+                        <div class="salaries-slideshow-profile-container">
+                            <p class="salaries-slideshow-profile-label">
+                                Based on 
+                                <span class="slideshow-profile-number">554</span> <!-- DYNAMIC DATA --> 
+                                profiles
+                            </p>
+                            <p class="salaries-slideshow-profile-hover hover-poc">Click to see</p>
                         </div>
                     </div>
                 </span>
@@ -270,16 +290,19 @@
         <h5 class="blog-container-label">Blog</h5>
         <div class="blog-container">
             <div class="blog-post blog-post-1">
-                <img class="blog-post-image blog-post-image-1" src="Assets/Images/blog-image.png" alt="blog image" />
+                <img class="blog-post-image blog-post-image-1" src="Assets/Images/Blog_Images/stark-difference.jpg" alt="blog image" />
+                <div class="blog-post-info-container">
                 <div class="blog-post-hl blog-post-hl-1"></div>
-                <div class="blog-post-info">
-                    <p class="blog-post-distributor">The Huffington Post</p>
-                    <h1 class="blog-post-title">On a Dry Spreadsheet, a Stark Difference: A $200,000 Pay Gap</h1>
-                    <p class="blog-post-date">22 November 2019</p>
+                    <div class="blog-post-info blog-post-info-1">
+                        <p class="blog-post-distributor blog-post-distributor-1">The Huffington Post</p>
+                        <h1 class="blog-post-title blog-post-title-1">On a Dry Spreadsheet, a Stark Difference: A $200,000 Pay Gap</h1>
+                        <p class="blog-post-date blog-post-date-1">22 November 2019</p>
+                        <p class="blog-post-1-cta">Read The Article</p>
+                    </div>
                 </div>
             </div>
             <div class="blog-post blog-post-2">
-                <img class="blog-post-image blog-post-image-2" src="Assets/Images/blog-image.png" alt="blog image" />
+                <img class="blog-post-image blog-post-image-2" src="Assets/Images/Blog_Images/salary-spreadsheet-creator.jpg" alt="blog image" />
                 <div class="blog-post-hl blog-post-hl-2"></div>
                 <div class="blog-post-info">
                     <p class="blog-post-distributor">The New-York Times</p>
@@ -288,7 +311,7 @@
                 </div>
             </div>
             <div class="blog-post blog-post-3">
-                <img class="blog-post-image blog-post-image-3" src="Assets/Images/blog-image.png" alt="blog image" />
+                <img class="blog-post-image blog-post-image-3" src="Assets/Images/Blog_Images/learned-so-far.jpg" alt="blog image" />
                 <div class="blog-post-hl blog-post-hl-3"></div>
                 <div class="blog-post-info">
                     <p class="blog-post-distributor">Campaign US</p>
@@ -297,11 +320,11 @@
                 </div>
             </div>
             <div class="blog-post blog-post-last">
-                <img class="blog-post-image blog-post-image-last" src="Assets/Images/blog-image.png" alt="blog image" />
+                <img class="blog-post-image blog-post-image-last" src="Assets/Images/Blog_Images/salaries-laid-bare.jpg" alt="blog image" />
                 <div class="blog-post-hl blog-post-hl-last"></div>
                 <div class="blog-post-info">
-                    <p class="blog-post-distributor">The Huffington Post</p>
-                    <h1 class="blog-post-title">On a Dry Spreadsheet, a Stark Difference: A $200,000 Pay Gap</h1>
+                    <p class="blog-post-distributor">Campaign US</p>
+                    <h1 class="blog-post-title">Creative ad agency salaries laid bare in public spreadsheet</h1>
                     <p class="blog-post-date">22 November 2019</p>
                 </div>
             </div>
@@ -381,7 +404,7 @@
                 </p>
                 <div class="newsletter-input-container">
                     <input class="newsletter-input-field" type="text" placeholder="Enter your email here" />
-                    <input class="newsletter-input-button" value="Sign up" />
+                    <input class="newsletter-input-button" type="button" value="Sign up" />
                 </div>
             </div>
             <div class="press-kit-download">
@@ -390,7 +413,7 @@
                     Want facts, figures, and everything in between?
                     Need them fast? Download our press kit.
                 </p>
-                <input class="press-kit-download-button" value="Download" />
+                <input class="press-kit-download-button" type="button" value="Download" />
             </div>
         </div>
         <div class="misc-info">
@@ -401,7 +424,7 @@
             </div>
             <div class="social-media-links">
                 <p class="footer-links insta">Instagram</p>
-                <p class="footer-links youtube">YouTube</p>
+                <p class="footer-links facebook">Facebook</p>
             </div>
         </div>
     </footer>
