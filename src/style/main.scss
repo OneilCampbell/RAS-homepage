@@ -1,44 +1,5 @@
-@import url("https://use.typekit.net/ffo1egr.css");
-
-@font-face{
-    font-family: 'Obviously Demo Wide Semibold';
-    src: url('./Assets/Fonts/ObviouslyDemo/ObviouslyDemo-WideSemibold.otf');
-}
-
-@font-face{
-    font-family: 'Obviously Demo Wide Medium';
-    src: url('./Assets/Fonts/ObviouslyDemo/ObviouslyDemo-WideMedium.otf');
-}
-
-@font-face{
-    font-family: 'Obviously Demo Condensed Light';
-    src: url('/Assets/Fonts/ObviouslyDemo/ObviouslyDemo-CondensedLight.otf');
-}
-
-@font-face{
-    font-family: 'Obviously Demo Condensed Medium';
-    src: url('./Assets/Fonts/ObviouslyDemo/ObviouslyDemo-CondensedMedium.otf');
-}
-
-@font-face{
-    font-family: 'Obviously Demo Condensed Bold';
-    src: url('./Assets/Fonts/ObviouslyDemo/ObviouslyDemo-CondensedBold.otf');
-}
-
-@font-face{
-    font-family: 'Maison Neue Book';
-    src: url('./Assets/Fonts/MaisonNeue/MaisonNeue-Book.ttf');
-}
-
-@font-face{
-    font-family: 'Maison Neue Medium';
-    src: url('./Assets/Fonts/MaisonNeue/MaisonNeue-Medium.ttf');
-}
-
-@font-face{
-    font-family: 'Maison Neue Bold';
-    src: url('./Assets/Fonts/MaisonNeue/MaisonNeue-Bold.ttf');
-}
+@import 'typography';
+@import 'modal';
 
 html, body{
     height: 100%;
