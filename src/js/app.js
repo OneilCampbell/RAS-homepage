@@ -1,5 +1,6 @@
 import ModalComponent from "./modal"
 
+//init components
 ModalComponent();
 
 (function( $ ) {

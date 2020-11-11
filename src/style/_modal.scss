@@ -1,14 +1,20 @@
 .modal {
   position: fixed;
-  width: 20vw;
-  height: 40vh;
+  z-index: 1000;
+  width: 80vw;
+  height: 80vh;
   background: white;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
   opacity: 0;
+  padding: 10px;
   &.active {
     opacity: 1;
+  }
+  @media(min-width: 560px) {
+    max-width:480px;
+    max-height: 600px;
   }
 }
 
