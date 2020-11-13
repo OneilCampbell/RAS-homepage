@@ -291,6 +291,11 @@ li:hover{
     background-position:right bottom;
 }
 
+.cta-white {
+    color: black;
+    background-image: linear-gradient(to right, #FD6757 50%, white 50%);
+}
+
 /**************************************************************** 
 -----------------------------------------------------------------
                         SALARIES PAGE
@@ -2611,4 +2616,128 @@ footer{
     .blog-post-date-4 {
         font-size: 16px;
     }
+}
+
+/**************************************************************** 
+-----------------------------------------------------------------
+                    BLOG PAGE MEDIA QUERIES
+-----------------------------------------------------------------
+*****************************************************************/
+
+.fixed {
+    position: fixed;
+}
+
+.modal {
+    visibility: hidden;
+    position: fixed;
+    width: 440px;
+    background: white;
+    box-sizing: border-box;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transition: .5s all ease-out;
+    transform: translateX(-50%) translateY(-45%);
+    opacity: 0;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+    background:rgba(0,0,0,.5);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal.active {
+    visibility: visible;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+
+}
+
+.modal .cta {
+    margin: 0 auto;
+}
+
+.modal * {
+    box-sizing: inherit;
+}
+.modal-body {
+    position: relative;
+    padding: 24px;
+    font-family: 'Maison Neue Medium';
+}
+.modal-heading {
+    margin: 0 8%;
+    margin-top: 0;
+    font-family: obviously-wide, sans-serif;
+    font-weight: 500;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.has-modal {
+    height: 100vh;
+    overflow: hidden;
+}
+.modal-body input, .modal-body textarea,
+.modal-body input::placeholder, .modal-body textarea::placeholder {
+    font-family: 'Maison Neue Medium';
+    width: 100%;
+    font-size: 16px;
+    border-radius: 0;
+    padding: 0px;
+    letter-spacing: 0px;
+    margin: 0;
+    line-height: 1.5;
+}
+.modal-body input, .modal-body textarea {
+    padding: 12px 16px;
+    border: none;
+    background: #eee;
+}
+.modal-body input::placeholder, .modal-body textarea::placeholder {
+    color: #ccc;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+.form-group {
+    margin-bottom: 24px;
+}
+.form-group.required label:after {
+    padding-left: 2px;
+    content: '*';
+    color:#FD6757;
+}
+
+.modal-footer {
+    position: relative;
+    padding: 24px;
+    border-top: 1px solid #ddd;
+    font-family: 'Maison Neue Medium';
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: black;
+    padding: 4px 8px;
+    color: white;
+    line-height: 1;
+    border: none;
+    font-size: 18px;
 }
