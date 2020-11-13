@@ -8,21 +8,51 @@
     <title>Real Agency Salaries</title>
 </head>
 <body>
+
+    <div class="modal" id="contact-modal">
+        <div class="modal-body">
+            <button class="close">×</button>
+            <h3 class="modal-heading text-center">Got questions, thoughts, or comments?</h3>
+            <p class="text-center">We'd love to know</p>
+            <form>
+                <div class="form-group required">
+                    <label for="name">Name</label>
+                    <input required type="text" id="name" name="name" placeholder="Your name">
+                </div>
+                <div class="form-group required">
+                    <label for="email">Email</label>
+                    <input required type="email" id="email" name="email" placeholder="Your name">
+                </div>
+                <div class="form-group required">
+                    <label for="message">Your message</label>
+                    <textarea rows="6" id="message" name="message" placeholder="Your message"></textarea>
+                </div>
+
+                <button type="submit" class="highlight cta bars-page-cta cta-white" href="#">Submit</button>
+            </form>
+        </div>
+
+        <div class="modal-footer text-center">
+            <a href="mailto:realagencysalaries@gmail.com">realagencysalaries@gmail.com</a>
+        </div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+
     <header class="about-page-header">
         <nav>
-            <img class="nav-logo" src="Assets/Images/nav-logo.png" alt="Real Agency Salaries" />
+            <a href="index.html"><img class="nav-logo" src="Assets/Images/nav-logo.png" alt="Real Agency Salaries" /></a>
             <ul>
                 <span> 
                     <li>Search Salaries</li> 
                 </span>
                 <span> 
-                    <li>About</li> 
+                    <li><a href="about.html">About</a></li>
                 </span>
                 <span> 
-                    <li>Blog</li> 
+                    <li><a href="blog.html">Blog</a></li>
                 </span>
                 <span>
-                    <li>Contact</li> 
+                    <li id="contact" class="modal-trigger" data-id="contact-modal">Contact</li> 
                 </span>
                 <span class="highlight about-page-landing-page-nav-cta landing-page-nav-cta"> 
                     <li>Personal Salary Report</li> 
@@ -40,7 +70,7 @@
         
     <div id="mobile-menu" class="mobile-menu">
         <div class="mobile-menu-header">
-            <img class="mobile-menu-logo" src="./Assets/Images/inverted-logo.png" alt="real agency salaries logo" />
+            <a href="index.html"><img class="mobile-menu-logo" src="./Assets/Images/inverted-logo.png" alt="real agency salaries logo" /></a>
             <a href="#close" title="Close" class="mobile-menu-close-button"><div class="mobile-menu-close-button">x</div></a>
         </div>
         <ul class="mobile-menu-links">
@@ -48,13 +78,13 @@
                 <li>Search Salaries</li> 
             </span>
             <span> 
-                <li>About</li> 
+                <li><a href="about.html">About</a></li>
             </span>
             <span> 
-                <li>Blog</li> 
+                <li><a href="blog.html">Blog</a></li>
             </span>
             <span>
-                <li>Contact</li> 
+                <li class="modal-trigger" data-id="contact-modal">Contact</li> 
             </span>
             <span class="highlight mobile-menu-nav-cta"> 
                 <li>Personal Salary Report</li> 
