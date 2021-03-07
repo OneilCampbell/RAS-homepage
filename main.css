@@ -185,7 +185,8 @@ li:hover{
 *****************************************************************/
 
 .page{
-    height: 100%;
+    /* height: 100%; */
+    height: auto;
     width: 100%;
     /* overflow-x: hidden; */
 }
@@ -193,7 +194,8 @@ li:hover{
 .landing-page{
     padding-top: 123px;
     padding-bottom: 1px;
-    height: calc(100% - 123px);
+    /* height: calc(100% - 123px); */
+    height: auto;
     background: #FD6757;
 }
 
@@ -222,7 +224,8 @@ li:hover{
 
 .bars-page-container{
     width: 90%;
-    height: 70%;
+    /* height: 70%; */
+    height: auto;
     margin-top: 10%;
     margin-left: 5%;
     display: flex;
@@ -235,6 +238,7 @@ li:hover{
 .bars-page-description-container{
     background: black;
     margin-right: 10px;
+    padding-bottom: 50px;
 }
 
 .bars-page-header {
@@ -641,6 +645,11 @@ li:hover{
     margin: 0 5%;
 }
 
+.blog-links{
+    text-decoration: none;
+    color: inherit;
+}
+
 .blog-post-hl{
     width: 10px;
     height: auto;
@@ -673,6 +682,12 @@ li:hover{
 
 .blog-post-image-1{
     width: 50%;
+}
+
+.blog-post-image-2,
+.blog-post-image-3,
+.blog-post-image-last{
+    max-height: 200px;
 }
 
 .blog-post-info-container{
@@ -1736,7 +1751,7 @@ footer{
         margin-left: 5%;
     }
     .bars-page-container {
-        height: 90%;
+        /* height: 90%; */
         margin-top: 5%;
     }
     .bars-page-header {
@@ -1802,7 +1817,7 @@ footer{
     }
     .bars-page-container {
         margin-top: 15%;
-        height: 90%;
+        /* height: 90%; */
     }
     .salaries-page-database-label {
         font-size: 16px;
@@ -2020,7 +2035,7 @@ footer{
         margin-top: 20px;
     }
     .bars-page-container {
-        height: 80%;
+        /* height: 80%; */
     }
 }
 
@@ -2331,8 +2346,12 @@ footer{
 
 .team-member {
     height: 617px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     margin-right: 10px;
+}
+
+.team-member > img {
+    height: 100%;
 }
 
 .team-member > hr {
@@ -2635,15 +2654,25 @@ footer{
 
 .modal {
     visibility: hidden;
-    position: fixed;
+    /* position: fixed; */
+    position: absolute;
     width: 90vw;
     background: white;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     z-index: 1000;
-    top: 50%;
+    /* top: 50%; */
+    top: 100px;
     left: 50%;
+    -webkit-transition: .5s all ease-out;
+    -o-transition: .5s all ease-out;
     transition: .5s all ease-out;
-    transform: translateX(-50%) translateY(-45%);
+    /* -webkit-transform: translateX(-50%) translateY(-45%);
+        -ms-transform: translateX(-50%) translateY(-45%);
+            transform: translateX(-50%) translateY(-45%); */
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     opacity: 0;
 }
 @media(min-width: 475px) {
@@ -2669,7 +2698,12 @@ footer{
 
 .modal.active {
     visibility: visible;
-    transform: translateX(-50%) translateY(-50%);
+    /* -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%); */
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     opacity: 1;
 
 }
@@ -2679,7 +2713,8 @@ footer{
 }
 
 .modal * {
-    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
 }
 .modal-body {
     position: relative;
@@ -2699,7 +2734,7 @@ footer{
 
 .has-modal {
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .modal-body input, .modal-body textarea,
 .modal-body input::placeholder, .modal-body textarea::placeholder {
@@ -2753,4 +2788,8 @@ footer{
     line-height: 1;
     border: none;
     font-size: 18px;
+}
+
+.close:hover{
+    cursor: pointer;
 }
