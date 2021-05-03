@@ -597,15 +597,16 @@ li:hover{
 
 @keyframes revolve{
     0% {
+        -webkit-transform: translate3d(-95rem, 0, 0);
+        transform: translate3d(-95rem, 0, 0);
+      }
+
+    100% {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
         visibility: visible;
       }
     
-      100% {
-        -webkit-transform: translate3d(-95rem, 0, 0);
-        transform: translate3d(-95rem, 0, 0);
-      }
 }
 
 .ticker-label{
@@ -686,6 +687,7 @@ li:hover{
 
 .blog-post-image-2,
 .blog-post-image-3,
+.blog-post-image-5,
 .blog-post-image-last{
     max-height: 200px;
 }
@@ -708,6 +710,7 @@ li:hover{
 
 .blog-post-2:hover .blog-post-image-2,
 .blog-post-3:hover .blog-post-image-3,
+.blog-post-5:hover .blog-post-image-5,
 .blog-post-last:hover .blog-post-image-last{
     transition: all .3s ease-in-out; 
     margin-right: 11px;
@@ -716,6 +719,7 @@ li:hover{
 
 .blog-post-2:hover .blog-post-hl-2,
 .blog-post-3:hover .blog-post-hl-3,
+.blog-post-5:hover .blog-post-hl-5,
 .blog-post-last:hover .blog-post-hl-last{
     background: #FD6757;
 }
@@ -1233,7 +1237,7 @@ footer{
     .mobile-menu-logo{
         height: 132px;
         width: 150px;
-        margin-top: 50px;
+        /* margin-top: 50px; */
         margin-left: 50px;
     }
     .mobile-menu-header a{
@@ -1249,6 +1253,18 @@ footer{
         border: solid #FD6757 6px;
         padding: 0px 0px 12px 24px;
         font-size: 50px;
+    }
+    .close-icon-rectangle{
+        position: absolute;
+        width: 16px;
+        height: 2px;
+        background: white;
+    }
+    .rect-left{
+        transform: rotate(45deg);
+    }
+    .rect-right{
+        transform: rotate(-45deg);
     }
     .mobile-menu-close-button:hover{
         cursor: pointer;
@@ -1325,9 +1341,12 @@ footer{
     .bar-grouping {
         display: none;
     }
+    .salaries-page-br{
+        display: none;
+    }
     .salaries-page-database-label {
         font-size: 20px;
-        margin-top: 0px;
+        margin-top: 60px;
     }
     .salaries-page-headline {
         font-size: 80px;
@@ -1354,7 +1373,7 @@ footer{
     }
 
     .salaries-slideshow-lowest:hover .hover-lowest,
-    .salaries-slideshow-poc:hover .hover-poc
+    .salaries-slideshow-poc:hover .hover-poc,
     .salaries-slideshow-average:hover .hover-average,
     .salaries-slideshow-highest:hover .hover-highest{
         display: none;
@@ -1538,6 +1557,7 @@ footer{
     .blog-post-1:hover .blog-post-image-1,
     .blog-post-2:hover .blog-post-image-2,
     .blog-post-3:hover .blog-post-image-3,
+    .blog-post-5:hover .blog-post-image-5,
     .blog-post-last:hover .blog-post-image-last{
         animation: none;
     }
@@ -1580,6 +1600,10 @@ footer{
     }
 
 }
+
+/* @media only screen and (max-width: 767px) {
+    
+} */
 
 @media only screen and (max-width: 724px){
     .mobile-menu-logo {
@@ -2190,13 +2214,55 @@ footer{
         margin-left: -59px;
     }
     .landing-page-description {
-        margin-top: 170px;
+        margin-top: 40px;
     }
     .bars-page-header {
-        margin-top: 28%;
+        margin-top: 30px;
+        line-height: 50px;
     }
     .salaries-page-database-label {
-        margin-top: 40px;
+        margin-top: 60px;
+    }
+    .salaries-page-headline {
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -2px;
+    }
+    .salaries-page-br{
+        display: none;
+    }
+    .salaries-slideshow-label{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .salaries-slideshow-salary{
+        font-size: 64px;
+        line-height: 75px;
+    }
+    .salaries-slideshow-profile-container{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .redorange-header-rectangle-mobile {
+        height: 60px;
+        margin-top: 65px;
+    }
+    .blog-page-header-mobile {
+        margin-top: 37px;
+        height: 40px;
+    }
+    .social-media-page-ticker {
+        height: 110px;
+        padding: 5px;
+    }
+    .social-media-message-container {
+        margin-top: 30px;
+    }
+    .social-media-message-box-mobile {
+        height: 485px;
+    }
+    .mobile-menu-logo{
+        margin-top: 0px;
     }
     .mobile-menu-links {
         margin-top: 100px;
@@ -2253,12 +2319,12 @@ footer{
 *****************************************************************************************************/
 
 .about-page-header {
-    background: white;
+    background: #eeeeee;
 }
 
 .about-page-landing-page-nav-cta {
     border-color: #FD6757;
-    background: white;
+    background: #eeeeee;;
 }
 
 .about-page-landing-page-nav-cta > li {
@@ -2274,6 +2340,7 @@ footer{
 }
 
 .about-page-content {
+    background: #eeeeee;
     position: relative;
     margin-top: 123px;
     padding: 40px 80px;
@@ -2295,6 +2362,7 @@ footer{
     font-size: 72px;
     line-height: 70px;
     letter-spacing: 0px;
+    text-transform: uppercase;
 }
 
 .main-header-text,
@@ -2329,6 +2397,7 @@ footer{
     font-size: 72px;
     line-height: 70px;
     letter-spacing: 0px;
+    text-transform: uppercase;
 }
 
 .team-container-hl {
@@ -2340,18 +2409,23 @@ footer{
 .team-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     columns: 3;
 }
 
+.team-member:nth-child(3n+0){
+    margin-right: 0px;
+}
+
 .team-member {
-    height: 617px;
+    width: 400px;
+    height: 534px;
     margin-bottom: 100px;
-    margin-right: 10px;
+    margin-right: 40px;
 }
 
 .team-member > img {
-    height: 100%;
+    width: 100%;
 }
 
 .team-member > hr {
@@ -2450,6 +2524,7 @@ footer{
 *****************************************************************************************************/
 
 .blog-page-content {
+    background: #eeeeee;
     position: relative;
     margin-top: 123px;
     padding: 60px 80px;
@@ -2591,8 +2666,9 @@ footer{
     }
 
     .blog-post-info-container {
+        margin-top: -5px;
         width: auto;
-        padding: 10px 10px 10px 10px;
+        padding: 0px 6px 6px 6px;
     }
 
     .blog-post-distributor-1, 
