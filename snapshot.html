@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="./main.css"/>
+    <title>Real Agency Salaries</title>
+</head>
+
+<body id="snapshot">
+
+    <div class="modal" id="contact-modal">
+        <div class="modal-body">
+            <button class="close">×</button>
+            <h3 class="modal-heading text-center">Got questions, thoughts, or comments?</h3>
+            <p class="text-center">We'd love to know</p>
+            <form>
+                <div class="form-group required">
+                    <label for="name">Name</label>
+                    <input required type="text" id="name" name="name" placeholder="Your name">
+                </div>
+                <div class="form-group required">
+                    <label for="email">Email</label>
+                    <input required type="email" id="email" name="email" placeholder="Your name">
+                </div>
+                <div class="form-group required">
+                    <label for="message">Your message</label>
+                    <textarea rows="6" id="message" name="message" placeholder="Your message"></textarea>
+                </div>
+
+                <button type="submit" class="highlight cta bars-page-cta cta-white" href="#">Submit</button>
+            </form>
+        </div>
+
+        <div class="modal-footer text-center">
+            <a href="mailto:realagencysalaries@gmail.com">realagencysalaries@gmail.com</a>
+        </div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+
+    <header class="about-page-header">
+        <nav>
+            <a href="index.html"><img class="nav-logo" src="Assets/Images/nav-logo.png" alt="Real Agency Salaries" /></a>
+            <ul>
+                <span> 
+                    <li>Search Salaries</li> 
+                </span>
+                <span> 
+                    <li><a href="about.html">About</a></li>
+                </span>
+                <span> 
+                    <li><a href="blog.html">Blog</a></li>
+                </span>
+                <span>
+                    <li id="contact" class="modal-trigger" data-id="contact-modal">Contact</li> 
+                </span>
+                <span class="highlight about-page-landing-page-nav-cta landing-page-nav-cta"> 
+                    <li>Personal Salary Report</li> 
+                </span>
+            </ul>
+            <a href="#mobile-menu" class="mobile-menu-icon">
+                <div class="about-page-hamburger-icon-container hamburger-icon-container">
+                    <div class="about-page-hamburger-icon-hl hamburger-icon-hl hamburger-icon-hl-1"></div>
+                    <div class="about-page-hamburger-icon-hl hamburger-icon-hl"></div>
+                    <div class="about-page-hamburger-icon-hl hamburger-icon-hl"></div>
+                </div>
+            </a>
+        </nav>
+    </header>
+        
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-header">
+            <a href="index.html"><img class="mobile-menu-logo" src="./Assets/Images/inverted-logo.png" alt="real agency salaries logo" /></a>
+            <a href="#close" title="Close" class="mobile-menu-close-button"><div class="mobile-menu-close-button">x</div></a>
+        </div>
+        <ul class="mobile-menu-links">
+            <span> 
+                <li>Search Salaries</li> 
+            </span>
+            <span> 
+                <li><a href="about.html">About</a></li>
+            </span>
+            <span> 
+                <li><a href="blog.html">Blog</a></li>
+            </span>
+            <span>
+                <li class="modal-trigger" data-id="contact-modal">Contact</li> 
+            </span>
+            <span class="highlight mobile-menu-nav-cta"> 
+                <li>Personal Salary Report</li> 
+            </span>
+        </ul>
+    </div>
+
+
+    <div class="snapshot-content">
+
+        <!------------------------- 
+            
+            FILTERS
+
+         --------------------------->
+
+
+        <div class="salaries-page-slideshow">
+            <div class="salaries-page-slideshow-vertical-bar"></div>
+            <div class="salaries-page-slideshow-averages-container">
+                <span class="salaries-slideshow-label-span">
+                    <div class="salaries-slideshow-highest">
+                        <h4 class="salaries-slideshow-label">White Men</h4>
+                        <div class="salaries-slideshow-arrow-container">
+                            <p id="highest-salary" class="salaries-slideshow-salary">$134,700</p> <!-- DYNAMIC DATA --> 
+                        </div>
+                        <div class="salaries-slideshow-profile-container">
+                            <p class="salaries-slideshow-profile-label">
+                                Based on 
+                                <span class="slideshow-profile-number">554</span> <!-- DYNAMIC DATA --> 
+                                profiles
+                            </p>
+                            <p class="salaries-slideshow-profile-hover hover-highest">Click to see</p>
+                        </div>
+                    </div>
+                </span>
+                <span class="salaries-slideshow-label-span">
+                    <div class="salaries-slideshow-average">
+                        <h4 class="salaries-slideshow-label">Men of Color</h4>
+                        <div class="salaries-slideshow-arrow-container">
+                            <p id="average-salary" class="salaries-slideshow-salary">$59,700</p> <!-- DYNAMIC DATA -->
+                        </div> 
+                        <div class="salaries-slideshow-profile-container">
+                            <p class="salaries-slideshow-profile-label">
+                                Based on 
+                                <span class="slideshow-profile-number">554</span> <!-- DYNAMIC DATA --> 
+                                profiles
+                            </p>
+                            <p class="salaries-slideshow-profile-hover hover-average">Click to see</p>
+                        </div>
+                    </div>
+                </span>
+                <span class="salaries-slideshow-label-span">
+                    <div class="salaries-slideshow-lowest">
+                        <h4 class="salaries-slideshow-label">White Women</h4>
+                        <div class="salaries-slideshow-arrow-container">
+                            <p id="lowest-salary" class="salaries-slideshow-salary">$18,700</p> <!-- DYNAMIC DATA -->
+                        </div> 
+                        <div class="salaries-slideshow-profile-container">
+                            <p class="salaries-slideshow-profile-label">
+                                Based on 
+                                <span class="slideshow-profile-number">554</span> <!-- DYNAMIC DATA --> 
+                                profiles
+                            </p>
+                            <p class="salaries-slideshow-profile-hover hover-lowest">Click to see</p>
+                        </div>
+                    </div>
+                </span>
+                <span class="salaries-slideshow-label-span">
+                    <div class="salaries-slideshow-poc">
+                        <h4 class="salaries-slideshow-label">Women of Color</h4>
+                        <div class="salaries-slideshow-arrow-container">
+                            <p id="poc-salary" class="salaries-slideshow-salary">$18,700</p> <!-- DYNAMIC DATA -->
+                        </div> 
+                        <div class="salaries-slideshow-profile-container">
+                            <p class="salaries-slideshow-profile-label">
+                                Based on 
+                                <span class="slideshow-profile-number">554</span> <!-- DYNAMIC DATA --> 
+                                profiles
+                            </p>
+                            <p class="salaries-slideshow-profile-hover hover-poc">Click to see</p>
+                        </div>
+                    </div>
+                </span>
+            </div>
+        </div>
+
+        <button id="columns-button">Columns</button>
+
+        <div id="results-container"></div>
+
+        <div class="total-container">
+            <p class="total-label">Total entrees</p>
+            <p id="total-amount"></p>
+        </div>
+
+        <div id="columns-modal" class="hide-modal">
+            <div class="columns-modal-header-container">
+                <img id="columns-modal-arrow" src="/Assets/Images/back-arrow.png" alt="back arrow" />
+                <p class="columns-modal-header">Columns</p>
+            </div>
+            <div id="columns-label-container"></div>
+            <button id="columns-modal-button" class="modal-button">Save</button>
+        </div>
+    </div>
+
+    <div class="personal-report-container">
+        <h1 class="personal-report-header">We need you</h1>
+        <div class="personal-report-message-container">
+            <div class="personal-report-vr"></div>
+            <p class="personal-report-message">
+                Anonymously share your salary with us and you'll help
+                women and people of color know their worth and ask for
+                fair pay.
+            </p>
+        </div>
+        <button class="personal-report-button">Personal Salary Report</button>
+    </div>
+
+    <footer>
+        <div class="contact-info">
+            <img class="footer-logo" src="Assets/Images/nav-logo.png" alt="real agency salaries logo" />
+            <p class="ras-email-address">realagencysalaries@gmail.com</p>
+        </div>
+        <div class="cta-section">
+            <div class="newsletter-signup">
+                <h2 class="newsletter-label">Newsletter</h2>
+                <p class="newletter-description">
+                    We'll keep you in the know, not in the dark.
+                    Once a month we will send you our latest findings,
+                    relevant updates, and nothing else.
+                </p>
+                <div class="newsletter-input-container">
+                    <input class="newsletter-input-field" type="text" placeholder="Enter your email here" />
+                    <input class="newsletter-input-button" type="button" value="Sign up" />
+                </div>
+            </div>
+            <div class="press-kit-download">
+                <h2 class="press-kit-label">Press Kit</h2>
+                <p class="press-kit-description">
+                    Want facts, figures, and everything in between?
+                    Need them fast? Download our press kit.
+                </p>
+                <input class="press-kit-download-button" type="button" value="Download" />
+            </div>
+        </div>
+        <div class="misc-info">
+            <div class="terms-and-copyright">
+                <p class="copyright">@ Real Agency Salaries 2020</p>
+                <p class="footer-links privacy-policy">Privacy Policy</p>
+                <p class="footer-links terms-and-conditions">Terms & Conditions</p>
+            </div>
+            <div class="social-media-links">
+                <p class="footer-links insta">Instagram</p>
+                <p class="footer-links facebook">Facebook</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./snapshot.js" defer></script>
+</body>
+</html>
