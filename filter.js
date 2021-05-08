@@ -83,6 +83,7 @@ filterBackButtons.forEach((btn) => {
 
 //use the options and specified data to create the filter content
 const populateFilterContent = (options, dataType) => {
+  const currentData = filters[dataType];
   const data = filterData[dataType];
   filterList.innerHTML = "";
   if (!data) return;
@@ -90,6 +91,14 @@ const populateFilterContent = (options, dataType) => {
   data.forEach((item) => {
     const li = document.createElement("li");
     li.innerHTML = item;
+
+    if (currentData) {
+      currentData.forEach((itm) => {
+        if (item === itm) {
+          li.classList.add("selected");
+        }
+      });
+    }
 
     if ("multiselect" in options) {
       li.addEventListener("click", function (e) {
@@ -129,7 +138,7 @@ const singleSelectHandler = (e, dataType) => {
   if (filters[dataType] === value) {
     filters[dataType] = [];
   } else {
-    filters[dataType] = value;
+    filters[dataType] = [value];
   }
 };
 
