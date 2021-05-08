@@ -121,15 +121,18 @@
           <ul class="list-unstyled filter-options">
             <li class="filter-options-item"
                 data-search
-                data-multiselect="true"
+                data-type="multi-select"
                 data-content="countries">Countries</li>
             <li data-search
-                data-multiselect
+                data-type="multi-select"
                 data-content="cities" class="filter-options-item">Cities</li>
             <li data-search
-                data-singleselect
+                data-type="single-select"
                 data-content="departments" class="filter-options-item">Departments</li>
-            <li class="filter-options-item">Filter Option 1</li>
+            <li data-type="multi-range" 
+                data-content="awards" class="filter-options-item">Awards</li>
+            <li data-type="single-range" 
+                data-content="salary" class="filter-options-item">Salary</li>
           </ul>
         </div>
           

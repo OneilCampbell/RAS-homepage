@@ -5,8 +5,17 @@ const filterHeaderActive = document.getElementById("filter-header-active");
 const filterSearch = document.getElementById("filter-search");
 const filterList = document.getElementById("filter-list");
 
+let isFilterOpen = false;
+let filters = {};
+
 //dummy data
 let filterData = {
+  awards: [
+    ["top international awards", "cannes lions, d&ad"],
+    ["international awards", "other than above"],
+    ["local awards", "all local awards"],
+  ],
+  salary: [["Annual Salary"]],
   countries: [
     "Canada",
     "USA",
@@ -45,9 +54,7 @@ let filterData = {
   ],
 };
 
-let isFilterOpen = false;
-let filters = {};
-
+//init top level filters
 const handleFilterClick = (e) => {
   //set filter title
   const filterTitle = e.target.innerHTML;
@@ -67,6 +74,7 @@ const handleFilterClick = (e) => {
     filterWrapper.classList.remove("filter-wrapper--open");
   }
 };
+
 filterOptions.forEach((option) => {
   option.addEventListener("click", handleFilterClick);
 });
@@ -77,16 +85,54 @@ const handleFilterBackClick = () => {
     isFilterOpen = !isFilterOpen;
   }
 };
+
 filterBackButtons.forEach((btn) => {
   btn.addEventListener("click", handleFilterBackClick);
 });
 
 //use the options and specified data to create the filter content
-const populateFilterContent = (options, dataType) => {
-  const currentData = filters[dataType];
-  const data = filterData[dataType];
-  filterList.innerHTML = "";
+const populateFilterContent = (options, filterContent) => {
+  const data = filterData[filterContent];
   if (!data) return;
+
+  filterList.innerHTML = "";
+
+  if (options.type === "multi-select" || options.type === "single-select") {
+    buildSelectContent(data, options, filterContent);
+  } else if (
+    options.type === "multi-range" ||
+    options.type === "single-range"
+  ) {
+    buildRangeContent(data, options, filterContent);
+  }
+};
+
+const buildRangeContent = (data, options, filterContent) => {
+  console.log(data);
+  data.forEach((item) => {
+    const div = document.createElement("div");
+    const title = document.createElement("h3");
+    title.innerHTML = item[0];
+    const subtitle = document.createElement("h4");
+    subtitle.innerHTML = item[1];
+
+    const lowInput = document.createElement("input");
+    lowInput.classList.add("filter-input-low");
+    const highInput = document.createElement("input");
+    highInput.classList.add("filter-input-high");
+
+    div.appendChild(title);
+    div.appendChild(subtitle);
+
+    div.appendChild(lowInput);
+    div.appendChild(highInput);
+
+    filterList.appendChild(div);
+  });
+};
+
+const buildSelectContent = (data, options, filterContent) => {
+  const currentData = filters[filterContent];
 
   data.forEach((item) => {
     const li = document.createElement("li");
@@ -100,13 +146,13 @@ const populateFilterContent = (options, dataType) => {
       });
     }
 
-    if ("multiselect" in options) {
+    if (options.type === "multi-select") {
       li.addEventListener("click", function (e) {
-        multiSelectHandler(e, dataType);
+        multiSelectHandler(e, filterContent);
       });
-    } else if ("singleselect" in options) {
+    } else if (options.type === "single-select") {
       li.addEventListener("click", function (e) {
-        singleSelectHandler(e, dataType);
+        singleSelectHandler(e, filterContent);
       });
     }
 
@@ -121,7 +167,20 @@ const multiSelectHandler = (e, dataType) => {
 
   el.classList.toggle("selected");
 
-  updateSelectFilters(dataType, value);
+  if (!(dataType in filters)) {
+    filters[dataType] = [];
+  }
+
+  if (filters[dataType].includes(value)) {
+    for (var i = 0; i < filters[dataType].length; i++) {
+      if (filters[dataType][i] === value) {
+        filters[dataType].splice(i, 1);
+      }
+    }
+  } else {
+    filters[dataType].push(value);
+  }
+  console.log(filters);
 };
 
 const singleSelectHandler = (e, dataType) => {
@@ -141,22 +200,6 @@ const singleSelectHandler = (e, dataType) => {
     el.classList.add("selected");
   }
   console.log(filters);
-};
-
-const updateSelectFilters = (dataType, value) => {
-  if (!(dataType in filters)) {
-    filters[dataType] = [];
-  }
-
-  if (filters[dataType].includes(value)) {
-    for (var i = 0; i < filters[dataType].length; i++) {
-      if (filters[dataType][i] === value) {
-        filters[dataType].splice(i, 1);
-      }
-    }
-  } else {
-    filters[dataType].push(value);
-  }
 };
 
 const initFilters = () => {};
