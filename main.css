@@ -2428,6 +2428,11 @@ footer{
     width: 100%;
 }
 
+
+#ryan-image{
+    height: 534px;
+}
+
 .team-member > hr {
     height: 4px;
     background: black;
@@ -2509,6 +2514,7 @@ footer{
         width: 100%;
         height: auto;
     }
+
 }
 
 
