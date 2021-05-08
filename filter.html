@@ -7,102 +7,124 @@
   <title>Filter </title>
   <style>
     * {
-  box-sizing: border-box;
-}
+      box-sizing: border-box;
+    }
 
-.filter-wrapper {
-  position: relative;
-  left: 0;
-  width: 200%;
-  height: 100%;
-  transition: .25s ease-out all;
-}
-.filter-content {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  width: 50%;
-  float: left;
-}
-.filter-menu {
-  border: 4px solid black;
-  width: 300px;
-  height: 700px;
-  margin: 0 auto;
-  overflow: hidden;
-}
+    .filter-wrapper {
+      position: relative;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      transition: .25s ease-out all;
+    }
+    .filter-content {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      width: 50%;
+      float: left;
+    }
+    .filter-menu {
+      border: 4px solid black;
+      width: 300px;
+      height: 700px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
 
-.filter-head {
-  position: relative;
-  height: 60px;
-  border-bottom: 4px solid black;
-}
+    .filter-head {
+      position: relative;
+      height: 60px;
+      border-bottom: 4px solid black;
+    }
 
-.filter-header {
-  padding: 18px 8px;
-  text-align: center;
-}
+    .filter-header {
+      padding: 18px 8px;
+      text-align: center;
+    }
 
-.filter-header-back {
-  position: absolute;
-  left: 0;
-  top: 10px;
-  padding: 8px;
-}
+    .filter-header-back {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      padding: 8px;
+    }
 
-.filter-body {
-  height: 85%;
-  display: flex;
-  flex-direction: column;
-}
-.filter-footer {
-  padding: 8px;
-  border-top: 4px solid black;
-  display: flex;
-}
+    .filter-body {
+      height: 85%;
+      display: flex;
+      flex-direction: column;
+    }
+    .filter-footer {
+      padding: 8px;
+      border-top: 4px solid black;
+      display: flex;
+    }
 
-.list-unstyled {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.list-unstyled li {
-    border: 1px solid #eee;
-    padding: 16px;
-    position: relative;
-  }
+    .list-unstyled {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .list-unstyled li {
+      border-top: 1px solid #eee;
+      padding: 16px;
+      position: relative;
+    }
 
-.filter-options {
-  height: 80%;
-}
+    .filter-options {
+      height: 80%;
+    }
 
-.filter-options-item:after {
-    content: '>';
-    position: absolute;
-    right: 8px;
-  }
+    .filter-options-item:after {
+      content: '>';
+      position: absolute;
+      right: 8px;
+    }
 
+    .filter-wrapper--open {
+      left: -100%;
+    }
 
-.filter-wrapper--open {
-  left: -100%;
-}
+    .filter-body-search {
+      width: 100%;
+      padding: 16px;
+      padding-left: 30px;
+      background: #eee;
+      border: none;
+    }
 
-.filter-body-search {
-  width: 100%;
-  padding: 16px;
-  padding-left: 30px;
-  background: #eee;
-  border: none;
-}
+    .filter-body-list {
+      overflow-y: auto;
+      color: #aaa;
+    }
+    .filter-body-list h3, .filter-body-list h4 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
 
-.filter-body-list {
-  overflow-y: auto;
-  color: #aaa;
-  
-}
-.filter-body-list li.selected {
-    color: #000;
-  }
+    .filter-body-list li.selected {
+      color: #000;
+    }
+
+    .filter-input {
+      width: 100%;
+      border-radius: 0;
+      border: 4px solid black;
+      font-size: 16px;
+      padding: 8px;
+    }
+    .filter-input-group {
+      display: inline-block;
+      width: 50%;
+    }
+    .filter-input-group {
+      padding-right: 16px;
+    }
+    .filter-input-group:last-child {
+      padding-left: 16px;
+      padding-right: 0;
+    }
   </style>
 </head>
 <body>
@@ -129,10 +151,16 @@
             <li data-search
                 data-type="single-select"
                 data-content="departments" class="filter-options-item">Departments</li>
+            <li data-type="single-range" 
+                data-content="salary" class="filter-options-item">Annual Salary</li>
+            <li data-type="single-range" 
+                data-content="experience" class="filter-options-item">Years of Experience</li>
             <li data-type="multi-range" 
                 data-content="awards" class="filter-options-item">Awards</li>
-            <li data-type="single-range" 
-                data-content="salary" class="filter-options-item">Salary</li>
+            <li data-type="single-select" 
+                data-content="race" class="filter-options-item">Race</li>
+            <li data-type="single-select" 
+                data-content="gender" class="filter-options-item">Gender</li>
           </ul>
         </div>
           

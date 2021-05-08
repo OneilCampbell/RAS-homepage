@@ -10,12 +10,24 @@ let filters = {};
 
 //dummy data
 let filterData = {
+  gender: ["Female", "Male", "Non-binary", "Other"],
+  race: [
+    "Black",
+    "White",
+    "Asian/Southeast Asian",
+    "Latinx",
+    "American Indian/Pacific Islander",
+    "Middle Eastern",
+    "Mixed Race",
+    "Other",
+  ],
   awards: [
     ["top international awards", "cannes lions, d&ad"],
     ["international awards", "other than above"],
     ["local awards", "all local awards"],
   ],
-  salary: [["Annual Salary"]],
+  salary: [["", ""]],
+  experience: [["", ""]],
   countries: [
     "Canada",
     "USA",
@@ -108,26 +120,77 @@ const populateFilterContent = (options, filterContent) => {
 };
 
 const buildRangeContent = (data, options, filterContent) => {
-  console.log(data);
+  const currentData = filters[filterContent];
+  const length = data.length;
+  console.log(length);
+
   data.forEach((item) => {
-    const div = document.createElement("div");
-    const title = document.createElement("h3");
-    title.innerHTML = item[0];
-    const subtitle = document.createElement("h4");
-    subtitle.innerHTML = item[1];
+    const li = document.createElement("li");
+
+    if (item[0]) {
+      const title = document.createElement("h3");
+      title.innerHTML = item[0];
+      li.appendChild(title);
+    }
+
+    if (item[1]) {
+      const subtitle = document.createElement("h4");
+      subtitle.innerHTML = item[1];
+      li.appendChild(subtitle);
+    }
+
+    const lowInputGroup = document.createElement("div");
+    lowInputGroup.classList.add("filter-input-group");
+
+    const lowInputLabel = document.createElement("label");
+    lowInputLabel.innerHTML = "From";
 
     const lowInput = document.createElement("input");
-    lowInput.classList.add("filter-input-low");
+    lowInput.classList.add("filter-input", "filter-input--left");
+    lowInput.addEventListener("input", function (e) {
+      inputHandler(e, filterContent, item[0], "min");
+    });
+
+    //set state if exists
+    if (currentData) {
+      if (length === 1) {
+        lowInput.value = currentData["min"];
+      } else {
+        lowInput.value = currentData[item[0]]["min"] || null;
+      }
+    }
+
+    // if( currentData[item[0]] )
+
+    const highInputGroup = document.createElement("div");
+    highInputGroup.classList.add("filter-input-group");
+
+    const highInputLabel = document.createElement("label");
+    highInputLabel.innerHTML = "To";
+
     const highInput = document.createElement("input");
-    highInput.classList.add("filter-input-high");
+    highInput.classList.add("filter-input", "filter-input--right");
+    highInput.addEventListener("input", function (e) {
+      inputHandler(e, filterContent, item[0], "max");
+    });
 
-    div.appendChild(title);
-    div.appendChild(subtitle);
+    if (currentData) {
+      if (length === 1) {
+        highInput.value = currentData["max"];
+      } else {
+        highInput.value = currentData[item[0]]["max"] || null;
+      }
+    }
 
-    div.appendChild(lowInput);
-    div.appendChild(highInput);
+    lowInputGroup.appendChild(lowInputLabel);
+    lowInputGroup.appendChild(lowInput);
+    li.appendChild(lowInputGroup);
 
-    filterList.appendChild(div);
+    highInputGroup.appendChild(highInputLabel);
+    highInputGroup.appendChild(highInput);
+    li.appendChild(highInputGroup);
+
+    filterList.appendChild(li);
   });
 };
 
@@ -199,6 +262,25 @@ const singleSelectHandler = (e, dataType) => {
     filters[dataType] = [value];
     el.classList.add("selected");
   }
+  console.log(filters);
+};
+
+const inputHandler = (e, filterContent, key, pos) => {
+  const value = e.target.value;
+
+  if (!(filterContent in filters)) {
+    filters[filterContent] = {};
+  }
+
+  if (key) {
+    if (!(key in filters[filterContent])) {
+      filters[filterContent][key] = {};
+    }
+    filters[filterContent][key][pos] = value;
+  } else {
+    filters[filterContent][pos] = value;
+  }
+
   console.log(filters);
 };
 
