@@ -133,13 +133,14 @@ const singleSelectHandler = (e, dataType) => {
     items[i].classList.remove("selected");
   }
 
-  el.classList.add("selected");
-
-  if (filters[dataType] === value) {
+  if (filters[dataType] && filters[dataType][0] === value) {
     filters[dataType] = [];
+    el.classList.remove("selected");
   } else {
     filters[dataType] = [value];
+    el.classList.add("selected");
   }
+  console.log(filters);
 };
 
 const updateSelectFilters = (dataType, value) => {
