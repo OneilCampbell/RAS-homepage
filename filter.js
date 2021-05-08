@@ -4,6 +4,8 @@ const filterBackButtons = document.querySelectorAll(".filter-header-back");
 const filterHeaderActive = document.getElementById("filter-header-active");
 const filterSearch = document.getElementById("filter-search");
 const filterList = document.getElementById("filter-list");
+const filterClear = document.getElementById("filter-clear");
+const filterApply = document.getElementById("filter-apply");
 
 let isFilterOpen = false;
 let filters = {};
@@ -283,6 +285,23 @@ const inputHandler = (e, filterContent, key, pos) => {
 
   console.log(filters);
 };
+
+const searchInputHandler = (e) => {
+  const items = document.querySelectorAll("#filter-list li");
+  console.log(items);
+  const value = e.target.value;
+  console.log(value);
+};
+
+filterSearch.addEventListener("input", searchInputHandler);
+
+//top level buttons
+filterClear.addEventListener("click", () => {
+  filters = {};
+});
+filterApply.addEventListener("click", () => {
+  // send to backend
+});
 
 const initFilters = () => {};
 
