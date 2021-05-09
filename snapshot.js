@@ -160,6 +160,7 @@
         lowInputLabel.innerHTML = "From";
 
         const lowInput = document.createElement("input");
+        lowInput.type = "number";
         lowInput.classList.add("filter-input", "filter-input--left");
         lowInput.addEventListener("input", function (e) {
           inputHandler(e, filterContent, item[0], "min");
@@ -185,6 +186,7 @@
         highInputLabel.innerHTML = "To";
 
         const highInput = document.createElement("input");
+        highInput.type = "number";
         highInput.classList.add("filter-input", "filter-input--right");
         highInput.addEventListener("input", function (e) {
           inputHandler(e, filterContent, item[0], "max");

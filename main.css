@@ -2864,15 +2864,23 @@ footer {
 }
 
 .button-fixed {
-  width: 156px;
+  display: block;
+  width: calc(100% - 30px);
   height: 60px;
-  margin-left: 72px;
+  margin-left: 15px;
+  margin-right: 15px;
   margin-top: 50px;
   margin-bottom: 30px;
   font-weight: 600;
   font-size: 16px;
   line-height: 25.04px;
   border: solid 4px black;
+}
+@media only screen and (min-width: 560px) {
+  .button-fixed {
+    margin-left: 54px;
+    width: 156px;
+  }
 }
 
 #columns-button {
@@ -3102,10 +3110,15 @@ footer {
   top: 120px;
   left: 100%;
   transition: 0.5s ease-out all;
+  border: 4px solid black;
+  background: white;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
 }
 
 .filter-menu.open {
-  left: calc(100% - 300px);
+  left: 0;
 }
 
 .filter-wrapper {
@@ -3114,8 +3127,18 @@ footer {
   width: 200%;
   height: 100%;
   transition: 0.25s ease-out all;
-  background: white;
 }
+
+@media only screen and (min-width: 560px) {
+  .filter-menu {
+    width: 300px;
+    height: 700px;
+  }
+  .filter-menu.open {
+    left: calc(100% - 300px);
+  }
+}
+
 .filter-content {
   display: flex;
   height: 100%;
@@ -3123,18 +3146,13 @@ footer {
   width: 50%;
   float: left;
 }
-.filter-menu {
-  border: 4px solid black;
-  width: 300px;
-  height: 700px;
-  margin: 0 auto;
-  overflow: hidden;
-}
 
 .filter-head {
   position: relative;
   height: 60px;
   border-bottom: 4px solid black;
+  font-family: "OBVIOUSLY-WIDE";
+  font-weight: 700;
 }
 
 .filter-header {
@@ -3170,6 +3188,7 @@ footer {
   border-top: 1px solid #eee;
   padding: 16px;
   position: relative;
+  font-family: "Maison Neue Book", sans-serif;
 }
 
 .filter-options {
@@ -3192,6 +3211,17 @@ footer {
   padding-left: 30px;
   background: #eee;
   border: none;
+  font-family: "Maison Neue Book", sans-serif;
+  line-height: 1.5;
+}
+.filter-body-search::placeholder {
+  font-family: "Maison Neue Book", sans-serif;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: normal;
 }
 
 .filter-body-list {
@@ -3214,6 +3244,7 @@ footer {
   border: 4px solid black;
   font-size: 16px;
   padding: 8px;
+  font-family: "Maison Neue Book", sans-serif;
 }
 .filter-input-group {
   display: inline-block;
