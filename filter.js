@@ -10,7 +10,7 @@ const filterApply = document.getElementById("filter-apply");
 let isFilterOpen = false;
 let filters = {};
 
-//dummy data
+//dummy data, this will need to be provided by the backend
 let filterData = {
   gender: ["Female", "Male", "Non-binary", "Other"],
   race: [
@@ -78,6 +78,7 @@ const handleFilterClick = (e) => {
   const data = e.target.dataset;
 
   filterSearch.style.display = "search" in data ? "block" : "none";
+  filterSearch.value = "";
   populateFilterContent(data, data.content);
 
   // open or close
@@ -286,11 +287,31 @@ const inputHandler = (e, filterContent, key, pos) => {
   console.log(filters);
 };
 
+let initialItems;
+
 const searchInputHandler = (e) => {
-  const items = document.querySelectorAll("#filter-list li");
-  console.log(items);
   const value = e.target.value;
   console.log(value);
+  console.log(value.length);
+
+  if (value.length === 1 && !initialItems) {
+    initialItems = document.querySelectorAll("#filter-list li");
+  } else if (value.length === 0) {
+    initialItems.forEach((item) => {
+      filterList.appendChild(item);
+    });
+  }
+  console.log(initialItems);
+
+  filterList.innerHTML = "";
+
+  initialItems.forEach((item) => {
+    const title = item.innerHTML.toLowerCase();
+
+    if (title.includes(value.toLowerCase())) {
+      filterList.appendChild(item);
+    }
+  });
 };
 
 filterSearch.addEventListener("input", searchInputHandler);
@@ -302,7 +323,3 @@ filterClear.addEventListener("click", () => {
 filterApply.addEventListener("click", () => {
   // send to backend
 });
-
-const initFilters = () => {};
-
-initFilters();
