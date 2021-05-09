@@ -3212,9 +3212,9 @@ footer {
 
 .filter-count {
   pointer-events: none;
-  color: #ccc;
+  color: #999;
   text-align: right;
-  padding-right: 8px;
+  padding-right: 16px;
 }
 
 .filter-body-search {
@@ -3238,7 +3238,7 @@ footer {
 
 .filter-body-list {
   overflow-y: auto;
-  color: #aaa;
+  color: #999;
 }
 .filter-body-list h3,
 .filter-body-list h4 {
