@@ -80,7 +80,7 @@
     //init top level filters
     const handleFilterClick = (e) => {
       //set filter title
-      const filterTitle = e.target.innerHTML;
+      const filterTitle = e.target.childNodes[0].nodeValue;
       filterHeaderActive.innerHTML = filterTitle;
 
       // set filter ui ie. search-multi-select, search-single-select, multi-select, single-select
@@ -99,14 +99,20 @@
       }
     };
 
+    //init options
     filterOptions.forEach((option) => {
       option.addEventListener("click", handleFilterClick);
+      const div = document.createElement("div");
+      div.classList.add("filter-count");
+      div.innerHTML = "All";
+      option.appendChild(div);
     });
 
     const handleFilterBackClick = () => {
       if (isFilterOpen) {
         filterWrapper.classList.remove("filter-wrapper--open");
         isFilterOpen = !isFilterOpen;
+        updateSelectionCounts();
       } else {
         filterMenu.classList.toggle("open");
       }
@@ -115,6 +121,29 @@
     filterBackButtons.forEach((btn) => {
       btn.addEventListener("click", handleFilterBackClick);
     });
+
+    const updateSelectionCounts = () => {
+      filterOptions.forEach((item) => {
+        const filterType = item.dataset.type;
+        const content = filters[item.dataset.content];
+        const count = item.childNodes[1];
+        if (filterType === "single-select") {
+          count.innerHTML = content ? content[0] : "All";
+        } else if (filterType === "single-range") {
+          count.innerHTML = content ? `${content.min} - ${content.max}` : "All";
+        } else if (content && filterType === "multi-range") {
+          let min = 0;
+          let max = 0;
+          Object.entries(content).forEach((obj) => {
+            min += parseFloat(obj[1].min) || 0;
+            max += parseFloat(obj[1].max) || 0;
+          });
+          count.innerHTML = content ? `${min} - ${max}` : "All";
+        } else {
+          count.innerHTML = content ? content.length : "All";
+        }
+      });
+    };
 
     //use the options and specified data to create the filter content
     const populateFilterContent = (options, filterContent) => {

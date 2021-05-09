@@ -3129,6 +3129,10 @@ footer {
   transition: 0.25s ease-out all;
 }
 
+.filter-wrapper--open {
+  left: -100%;
+}
+
 @media only screen and (min-width: 560px) {
   .filter-menu {
     width: 300px;
@@ -3191,6 +3195,11 @@ footer {
   font-family: "Maison Neue Book", sans-serif;
 }
 
+.list-unstyled--has-count li {
+  display: flex;
+  justify-content: space-between;
+}
+
 .filter-options {
   height: 80%;
 }
@@ -3201,8 +3210,11 @@ footer {
   right: 8px;
 }
 
-.filter-wrapper--open {
-  left: -100%;
+.filter-count {
+  pointer-events: none;
+  color: #ccc;
+  text-align: right;
+  padding-right: 8px;
 }
 
 .filter-body-search {
