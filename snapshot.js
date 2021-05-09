@@ -170,7 +170,9 @@
           if (length === 1) {
             lowInput.value = currentData["min"];
           } else {
-            lowInput.value = currentData[item[0]]["min"] || null;
+            lowInput.value = currentData[item[0]]
+              ? currentData[item[0]]["min"]
+              : null;
           }
         }
 
@@ -192,7 +194,9 @@
           if (length === 1) {
             highInput.value = currentData["max"];
           } else {
-            highInput.value = currentData[item[0]]["max"] || null;
+            highInput.value = currentData[item[0]]
+              ? currentData[item[0]]["max"]
+              : null;
           }
         }
 
