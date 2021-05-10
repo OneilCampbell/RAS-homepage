@@ -98,7 +98,7 @@
       // set filter ui ie. search-multi-select, search-single-select, multi-select, single-select
       const data = e.target.dataset;
 
-      filterSearch.style.display = "search" in data ? "block" : "none";
+      filterSearchBox.style.display = "search" in data ? "block" : "none";
       filterSearch.value = "";
       populateFilterContent(data, data.content);
 
