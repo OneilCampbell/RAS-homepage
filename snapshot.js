@@ -185,12 +185,15 @@
 
         if (item[0]) {
           const title = document.createElement("h3");
+          title.classList.add("filter-body-list-title", "text-black");
           title.innerHTML = item[0];
           li.appendChild(title);
         }
 
         if (item[1]) {
           const subtitle = document.createElement("h4");
+          subtitle.classList.add("filter-body-list-subtitle");
+
           subtitle.innerHTML = item[1];
           li.appendChild(subtitle);
         }
@@ -203,6 +206,7 @@
 
         const lowInput = document.createElement("input");
         lowInput.type = "number";
+        lowInput.placeholder = 0;
         lowInput.classList.add("filter-input", "filter-input--left");
         lowInput.addEventListener("input", function (e) {
           inputHandler(e, filterContent, item[0], "min");

@@ -3172,11 +3172,11 @@ footer {
 
 @media only screen and (min-width: 560px) {
   .filter-menu {
-    width: 320px;
+    width: 340px;
     height: 700px;
   }
   .filter-menu.open {
-    left: calc(100% - 320px);
+    left: calc(100% - 340px);
   }
 }
 
@@ -3320,14 +3320,38 @@ footer {
   overflow-y: auto;
   color: #999;
 }
-.filter-body-list h3,
-.filter-body-list h4 {
+.filter-body-list-title,
+.filter-body-list-subtitle {
   margin-top: 0;
+}
+
+.filter-body-list-title {
   margin-bottom: 8px;
+  text-transform: capitalize;
+}
+.filter-body-list-subtitle {
+  margin-bottom: 16px;
+}
+
+.text-black {
+  color: black;
+}
+.text-grey {
+  color: #999;
 }
 
 .filter-body-list li.selected {
+  position: relative;
   color: #000;
+}
+.filter-body-list li.selected:after {
+  content: "";
+  background: url(./Assets/Images/checkmark.svg);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
 }
 
 .filter-input {
@@ -3336,14 +3360,24 @@ footer {
   border: 4px solid black;
   font-size: 16px;
   padding: 8px;
-  font-family: "Maison Neue Book", sans-serif;
+  font-family: "Maison Neue Bold", sans-serif;
+}
+.filter-input::placeholder {
+  font-size: 16px;
+  font-family: "Maison Neue Bold", sans-serif;
+  color: #999;
 }
 .filter-input-group {
   display: inline-block;
   width: 50%;
-}
-.filter-input-group {
   padding-right: 16px;
+}
+.filter-input-group label {
+  display: inline-block;
+  color: black;
+  font-family: "Maison Neue Bold", sans-serif;
+  font-weight: 600;
+  margin-bottom: 16px;
 }
 .filter-input-group:last-child {
   padding-left: 16px;
