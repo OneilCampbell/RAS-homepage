@@ -46,6 +46,14 @@ body {
   width: 100%;
   margin: 0;
 }
+/**************************************************************** 
+-----------------------------------------------------------------
+                            spacers
+-----------------------------------------------------------------
+*****************************************************************/
+.pxy-0 {
+  padding: 0px !important;
+}
 
 /**************************************************************** 
 -----------------------------------------------------------------
@@ -363,6 +371,7 @@ li:hover {
 
 .salaries-slideshow-label-span {
   /* display: flex; */
+  line-height: 1.25;
 }
 
 .salaries-slideshow-label {
@@ -2863,6 +2872,33 @@ footer {
   padding-bottom: 70px;
 }
 
+.btn {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  border: none;
+  background: none;
+  font-family: "OBVIOUSLY-WIDE";
+  padding: 12px 32px 16px;
+}
+
+.btn-block {
+  width: 100%;
+  transition: 0.25s ease-out all;
+}
+.btn-block:hover {
+  background: black;
+  color: white;
+}
+
+.btn-primary {
+  border: solid 4px black;
+}
+.btn-primary:hover {
+  border: 4px solid #fd6757;
+}
+
 .button-fixed {
   display: block;
   width: calc(100% - 30px);
@@ -3107,7 +3143,7 @@ footer {
 .filter-menu {
   position: fixed;
   z-index: 9999;
-  top: 120px;
+  top: 123px;
   left: 100%;
   transition: 0.5s ease-out all;
   border: 4px solid black;
@@ -3115,6 +3151,7 @@ footer {
   margin: 0 auto;
   overflow: hidden;
   width: 100%;
+  height: calc(100% - 123px);
 }
 
 .filter-menu.open {
@@ -3135,11 +3172,11 @@ footer {
 
 @media only screen and (min-width: 560px) {
   .filter-menu {
-    width: 300px;
+    width: 320px;
     height: 700px;
   }
   .filter-menu.open {
-    left: calc(100% - 300px);
+    left: calc(100% - 320px);
   }
 }
 
@@ -3162,24 +3199,31 @@ footer {
 .filter-header {
   padding: 18px 8px;
   text-align: center;
+  line-height: 1;
 }
 
 .filter-header-back {
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   padding: 8px;
+  line-height: 1;
 }
 
 .filter-body {
-  height: 85%;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  height: 100%;
 }
 .filter-footer {
+  position: relative;
   padding: 8px;
   border-top: 4px solid black;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .list-unstyled {
@@ -3188,9 +3232,10 @@ footer {
   padding: 0;
   margin: 0;
 }
+
 .list-unstyled li {
   border-top: 1px solid #eee;
-  padding: 16px;
+  padding: 24px 24px;
   position: relative;
   font-family: "Maison Neue Book", sans-serif;
 }
@@ -3205,9 +3250,14 @@ footer {
 }
 
 .filter-options-item:after {
-  content: ">";
+  content: "";
+  background-image: url(./Assets/Images/chevron-right.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 10px;
+  height: 12px;
   position: absolute;
-  right: 8px;
+  right: 16px;
 }
 
 .filter-count {
@@ -3219,13 +3269,43 @@ footer {
 
 .filter-body-search {
   width: 100%;
-  padding: 16px;
-  padding-left: 30px;
+  padding: 24px;
+  padding-left: 52px;
   background: #eee;
   border: none;
   font-family: "Maison Neue Book", sans-serif;
   line-height: 1.5;
+  font-size: 16px;
+  border-radius: 0;
 }
+.filter-body-search::placeholder {
+  color: #999;
+}
+
+#filter-search-box {
+  position: relative;
+}
+#filter-search-box:before {
+  position: absolute;
+  top: 24px;
+  left: 20px;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 4px solid #aaa;
+  border-radius: 20px;
+}
+#filter-search-box:after {
+  position: absolute;
+  top: 38px;
+  left: 36px;
+  content: "";
+  width: 4px;
+  height: 10px;
+  background: #aaa;
+  transform: rotate(-45deg);
+}
+
 .filter-body-search::placeholder {
   font-family: "Maison Neue Book", sans-serif;
   padding-top: 16px;

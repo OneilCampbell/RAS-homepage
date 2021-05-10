@@ -16,7 +16,7 @@
           <div class="filter-content">
             
             <div class="filter-head">
-              <div class="filter-header-back"><</div>
+              <div class="filter-header-back"><img src="./Assets/Images/back-arrow.png"/></div>
               <div class="filter-header">Filters</div>
             </div>
               
@@ -26,12 +26,15 @@
                 <li class="filter-options-item"
                     data-search
                     data-type="multi-select"
-                    data-content="countries">Countries</li>
+                    data-content="countries">Country</li>
                 <li data-search
                     data-type="multi-select"
-                    data-content="cities" class="filter-options-item">Cities</li>
-                <li data-type="single-select"
-                    data-content="departments" class="filter-options-item">Departments</li>
+                    data-content="cities" class="filter-options-item">City</li>
+                <li data-type="multi-select"
+                    data-content="workplace" class="filter-options-item">Workplace</li>
+                <li data-search
+                    data-type="single-select"
+                    data-content="departments" class="filter-options-item">Department</li>
                 <li data-type="single-range" 
                     data-content="salary" class="filter-options-item">Annual Salary</li>
                 <li data-type="single-range" 
@@ -46,20 +49,22 @@
             </div>
               
             <div class="filter-footer">
-              <button id="filter-clear">Clear</button>
-              <button id="filter-apply">Apply</button>
+              <button id="filter-clear" class="btn">Clear</button>
+              <button id="filter-apply" class="btn btn-primary">Apply</button>
             </div>
            </div>
         
             <div class="filter-content">
               
               <div class="filter-head">
-                <div class="filter-header-back"><</div>
+                <div class="filter-header-back"><img src="./Assets/Images/back-arrow.png"/></div>
                 <div id="filter-header-active" class="filter-header">Filter Option</div>
               </div>
              
                 <div class="filter-body">
-                  <input id="filter-search" placeholder="search" class="filter-body-search"/>
+                    <div id="filter-search-box">
+                        <input id="filter-search" placeholder="Search" class="filter-body-search"/>
+                    </div>
                   <div class="filter-body-list">
                     <ul id="filter-list" class="list-unstyled">
                       <li>Filter Option 02</li>
@@ -68,8 +73,8 @@
                   </div>
                 </div>
       
-                <div class="filter-footer">
-                  <button>Save</button>
+                <div class="filter-footer pxy-0">
+                  <button class="btn btn-block">Save</button>
                 </div>
               </div>
             </div>

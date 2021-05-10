@@ -8,6 +8,7 @@
     const filterOptions = document.querySelectorAll(".filter-options-item");
     const filterBackButtons = document.querySelectorAll(".filter-header-back");
     const filterHeaderActive = document.getElementById("filter-header-active");
+    const filterSearchBox = document.getElementById("filter-search-box");
     const filterSearch = document.getElementById("filter-search");
     const filterList = document.getElementById("filter-list");
     const filterClear = document.getElementById("filter-clear");
@@ -75,6 +76,17 @@
         "Finance",
         "Media",
       ],
+      workplace: [
+        "Agency Name 1",
+        "Agency Name 2",
+        "Agency Name 3",
+        "Agency Name 4",
+        "Agency Name 5",
+        "Agency Name 6",
+        "Agency Name 7",
+        "Agency Name 8",
+        "Agency Name 9",
+      ],
     };
 
     //init top level filters
@@ -109,6 +121,7 @@
     });
 
     const handleFilterBackClick = () => {
+      initialItems = null;
       if (isFilterOpen) {
         filterWrapper.classList.remove("filter-wrapper--open");
         isFilterOpen = !isFilterOpen;
@@ -365,6 +378,7 @@
     //top level buttons
     filterClear.addEventListener("click", () => {
       filters = {};
+      updateSelectionCounts();
     });
     filterApply.addEventListener("click", () => {
       // send to backend
