@@ -3147,7 +3147,7 @@ footer {
   left: 100%;
   transition: 0.5s ease-out all;
   border: 4px solid black;
-  background: white;
+  background: #eee;
   margin: 0 auto;
   overflow: hidden;
   width: 100%;
@@ -3190,14 +3190,13 @@ footer {
 
 .filter-head {
   position: relative;
-  height: 60px;
   border-bottom: 4px solid black;
   font-family: "OBVIOUSLY-WIDE";
   font-weight: 700;
 }
 
 .filter-header {
-  padding: 18px 8px;
+  padding: 24px 8px;
   text-align: center;
   line-height: 1;
 }
@@ -3234,7 +3233,6 @@ footer {
 }
 
 .list-unstyled li {
-  border-top: 1px solid #eee;
   padding: 24px 24px;
   position: relative;
   font-family: "Maison Neue Book", sans-serif;
@@ -3271,7 +3269,7 @@ footer {
   width: 100%;
   padding: 24px;
   padding-left: 52px;
-  background: #eee;
+  background: #e0e0e0;
   border: none;
   font-family: "Maison Neue Book", sans-serif;
   line-height: 1.5;
