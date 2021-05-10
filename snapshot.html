@@ -10,6 +10,76 @@
 
 <body id="snapshot">
 
+    <div id="filter-menu" class="filter-menu">
+        <div id="filter-wrapper" class="filter-wrapper">
+          
+          <div class="filter-content">
+            
+            <div class="filter-head">
+              <div class="filter-header-back"><img src="./Assets/Images/back-arrow.png"/></div>
+              <div class="filter-header">Filters</div>
+            </div>
+              
+            <div class="filter-body">
+      
+              <ul class="list-unstyled list-unstyled--has-count filter-options">
+                <li class="filter-options-item"
+                    data-search
+                    data-type="multi-select"
+                    data-content="countries">Country</li>
+                <li data-search
+                    data-type="multi-select"
+                    data-content="cities" class="filter-options-item">City</li>
+                <li data-type="multi-select"
+                    data-content="workplace" class="filter-options-item">Workplace</li>
+                <li data-search
+                    data-type="single-select"
+                    data-content="departments" class="filter-options-item">Department</li>
+                <li data-type="single-range" 
+                    data-content="salary" class="filter-options-item">Annual Salary</li>
+                <li data-type="single-range" 
+                    data-content="experience" class="filter-options-item">Years of Experience</li>
+                <li data-type="multi-range" 
+                    data-content="awards" class="filter-options-item">Awards</li>
+                <li data-type="single-select" 
+                    data-content="race" class="filter-options-item">Race</li>
+                <li data-type="single-select" 
+                    data-content="gender" class="filter-options-item">Gender</li>
+              </ul>
+            </div>
+              
+            <div class="filter-footer">
+              <button id="filter-clear" class="btn">Clear</button>
+              <button id="filter-apply" class="btn btn-primary">Apply</button>
+            </div>
+           </div>
+        
+            <div class="filter-content">
+              
+              <div class="filter-head">
+                <div class="filter-header-back"><img src="./Assets/Images/back-arrow.png"/></div>
+                <div id="filter-header-active" class="filter-header">Filter Option</div>
+              </div>
+             
+                <div class="filter-body">
+                    <div id="filter-search-box">
+                        <input id="filter-search" placeholder="Search" class="filter-body-search"/>
+                    </div>
+                  <div class="filter-body-list">
+                    <ul id="filter-list" class="list-unstyled">
+                      <li>Filter Option 02</li>
+                      <li>Filter Option 02</li>
+                    </ul>
+                  </div>
+                </div>
+      
+                <div class="filter-footer pxy-0">
+                  <button class="btn btn-block">Save</button>
+                </div>
+              </div>
+            </div>
+      </div>
+
     <div class="modal" id="contact-modal">
         <div class="modal-body">
             <button class="close">×</button>
@@ -102,6 +172,7 @@
 
          --------------------------->
 
+         <button class="button-fixed" id="filter-button">Filters</button>
 
         <div class="salaries-page-slideshow">
             <div class="salaries-page-slideshow-vertical-bar"></div>
