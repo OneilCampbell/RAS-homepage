@@ -1,8 +1,16 @@
 (function ($) {
   $(function () {
+
+    // -------------------
+    // START OF JQERY FCN
+    // ------------------- 
+
+
+
     var $home_page = document.getElementById("home");
 
     if ($home_page) {
+
       var $job_title = document.getElementById("job-title");
       var $job_location = document.getElementById("job-location");
       var $lowest_salary = document.getElementById("lowest-salary");
@@ -229,26 +237,15 @@
       var progress_icon = document.querySelector(".progress-icon");
 
       // landing page scroll height
-      var ln_p_sh =
-        window.pageYOffset +
-        document.querySelector(".landing-page").getBoundingClientRect().top;
+      var ln_p_sh = window.pageYOffset + document.querySelector(".landing-page").getBoundingClientRect().top;
       // bars page scroll height
-      var br_p_sh =
-        window.pageYOffset +
-        document.querySelector(".bars-page").getBoundingClientRect().top;
+      var br_p_sh = window.pageYOffset + document.querySelector(".bars-page").getBoundingClientRect().top;
       // salaries page scroll height
-      var sl_p_sh =
-        window.pageYOffset +
-        document.querySelector(".salaries-page").getBoundingClientRect().top;
+      var sl_p_sh = window.pageYOffset + document.querySelector(".salaries-page").getBoundingClientRect().top;
       // blog page scroll height
-      var bl_p_sh =
-        window.pageYOffset +
-        document.querySelector(".blog-page").getBoundingClientRect().top;
+      var bl_p_sh = window.pageYOffset + document.querySelector(".blog-page").getBoundingClientRect().top;
       // social media page scroll height
-      var sm_p_sh =
-        window.pageYOffset +
-        document.querySelector(".social-media-page").getBoundingClientRect()
-          .top;
+      var sm_p_sh = window.pageYOffset + document.querySelector(".social-media-page").getBoundingClientRect().top;
 
       // console.log(ln_p_sh, br_p_sh, sl_p_sh, bl_p_sh, sm_p_sh);
 
@@ -435,5 +432,12 @@
         overlay.classList.remove("active");
       };
     }
-  })(jQuery);
-});
+
+
+
+    // ------------------
+    // END OF JQERY FCN
+    // ------------------
+
+  });
+})(jQuery);
