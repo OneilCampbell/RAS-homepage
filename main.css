@@ -420,6 +420,7 @@ li:hover {
 .salaries-slideshow-highest {
   /* height: 25%; */
   padding: 20px 50px;
+  white-space: nowrap;
 }
 
 .salaries-slideshow-highest,
@@ -2868,8 +2869,12 @@ footer {
 .snapshot-content {
   background: #eeeeee;
   position: relative;
-  margin-top: 123px;
+  padding-top: 123px;
   padding-bottom: 70px;
+}
+
+.snapshot-label {
+    margin-top: 50px;
 }
 
 .btn {
@@ -2905,7 +2910,7 @@ footer {
   height: 60px;
   margin-left: 15px;
   margin-right: 15px;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 30px;
   font-weight: 600;
   font-size: 16px;
@@ -2919,10 +2924,43 @@ footer {
   }
 }
 
+.snapshot-vertical-bar{
+    width: 8px;
+}
+
+.snapshot-slideshow-label{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.snapshot-slideshow-salary{
+    font-size: 50px;
+    line-height: 30px;
+}
+
+.snapshot-slideshow-lowest,
+.snapshot-slideshow-poc,
+.snapshot-slideshow-average,
+.snapshot-slideshow-highest {
+    padding: 10px 50px;
+}
+
+.snapshot-slideshow-lowest:hover,
+.snapshot-slideshow-poc:hover,
+.snapshot-slideshow-average:hover,
+.snapshot-slideshow-highest:hover {
+    cursor: default;
+}
+
+.snapshot-profile-label{
+    margin-top: 19px;
+    font-size: 14px;
+}
+
 #columns-button {
   width: 156px;
   height: 60px;
-  margin-left: 72px;
+  margin-left: 5%;
   margin-top: 50px;
   margin-bottom: 30px;
   font-weight: 600;
@@ -2951,13 +2989,33 @@ footer {
   display: none;
 }
 
+.column-header-container{
+    display: flex;
+    border-top: solid 6px rgba(0, 0, 0, 0.05);
+    border-bottom: solid 6px rgba(0, 0, 0, 0.05);
+    padding: 14px 0px;
+    padding-right: 40px;
+}
+
 .column-header {
   margin-top: 0px;
   margin-bottom: 0px;
-  border-top: solid 6px rgba(0, 0, 0, 0.05);
-  border-bottom: solid 6px rgba(0, 0, 0, 0.05);
-  padding: 14px 0px;
-  padding-right: 40px;
+  font-family: "Maison Neue Medium";
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.56px;
+}
+
+.sort-arrow{
+    width: 10px;
+    height: 5px;
+    position: relative;
+    left: 10px;
+    top: 6px;
+}
+
+.descending{
+    transform: rotateX(180deg)
 }
 
 .column-entries {
@@ -2971,11 +3029,12 @@ footer {
   padding: 11px 0px;
   padding-right: 40px;
   margin: 0;
-  height: 17px;
+  height: 40px;
   font-family: "Maison Neue Medium";
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .total-container {

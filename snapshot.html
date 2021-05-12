@@ -114,7 +114,7 @@
             <a href="index.html"><img class="nav-logo" src="Assets/Images/nav-logo.png" alt="Real Agency Salaries" /></a>
             <ul>
                 <span> 
-                    <li>Search Salaries</li> 
+                    <li><a href="snapshot.html">Search Salaries</a></li> 
                 </span>
                 <span> 
                     <li><a href="about.html">About</a></li>
@@ -146,7 +146,7 @@
         </div>
         <ul class="mobile-menu-links">
             <span> 
-                <li>Search Salaries</li> 
+                <li><a href="snapshot.html">Search Salaries</a></li> 
             </span>
             <span> 
                 <li><a href="about.html">About</a></li>
@@ -171,73 +171,70 @@
             FILTERS
 
          --------------------------->
+         <h5 class="salaries-page-database-label snapshot-label">Bias Snapshot</h5>
 
          <button class="button-fixed" id="filter-button">Filters</button>
 
         <div class="salaries-page-slideshow">
-            <div class="salaries-page-slideshow-vertical-bar"></div>
+            <div class="salaries-page-slideshow-vertical-bar snapshot-vertical-bar"></div>
             <div class="salaries-page-slideshow-averages-container">
                 <span class="salaries-slideshow-label-span">
-                    <div class="salaries-slideshow-highest">
-                        <h4 class="salaries-slideshow-label">White Men</h4>
+                    <div class="salaries-slideshow-highest snapshot-slideshow-highest">
+                        <h4 class="salaries-slideshow-label snapshot-slideshow-label">White Men</h4>
                         <div class="salaries-slideshow-arrow-container">
-                            <p id="highest-salary" class="salaries-slideshow-salary">$134,700</p> <!-- DYNAMIC DATA --> 
+                            <p id="highest-salary" class="salaries-slideshow-salary snapshot-slideshow-salary">$134,700</p> <!-- DYNAMIC DATA --> 
                         </div>
                         <div class="salaries-slideshow-profile-container">
-                            <p class="salaries-slideshow-profile-label">
+                            <p class="salaries-slideshow-profile-label snapshot-profile-label">
                                 Based on 
                                 <span class="slideshow-profile-number">554</span> <!-- DYNAMIC DATA --> 
                                 profiles
                             </p>
-                            <p class="salaries-slideshow-profile-hover hover-highest">Click to see</p>
-                        </div>
-                    </div>
-                </span>
-                <span class="salaries-slideshow-label-span">
-                    <div class="salaries-slideshow-average">
-                        <h4 class="salaries-slideshow-label">Men of Color</h4>
-                        <div class="salaries-slideshow-arrow-container">
-                            <p id="average-salary" class="salaries-slideshow-salary">$59,700</p> <!-- DYNAMIC DATA -->
-                        </div> 
-                        <div class="salaries-slideshow-profile-container">
-                            <p class="salaries-slideshow-profile-label">
-                                Based on 
-                                <span class="slideshow-profile-number">554</span> <!-- DYNAMIC DATA --> 
-                                profiles
-                            </p>
-                            <p class="salaries-slideshow-profile-hover hover-average">Click to see</p>
                         </div>
                     </div>
                 </span>
                 <span class="salaries-slideshow-label-span">
-                    <div class="salaries-slideshow-lowest">
-                        <h4 class="salaries-slideshow-label">White Women</h4>
+                    <div class="salaries-slideshow-average snapshot-slideshow-average">
+                        <h4 class="salaries-slideshow-label snapshot-slideshow-label">Men of Color</h4>
                         <div class="salaries-slideshow-arrow-container">
-                            <p id="lowest-salary" class="salaries-slideshow-salary">$18,700</p> <!-- DYNAMIC DATA -->
+                            <p id="average-salary" class="salaries-slideshow-salary snapshot-slideshow-salary">$59,700</p> <!-- DYNAMIC DATA -->
                         </div> 
                         <div class="salaries-slideshow-profile-container">
-                            <p class="salaries-slideshow-profile-label">
+                            <p class="salaries-slideshow-profile-label snapshot-profile-label">
                                 Based on 
                                 <span class="slideshow-profile-number">554</span> <!-- DYNAMIC DATA --> 
                                 profiles
                             </p>
-                            <p class="salaries-slideshow-profile-hover hover-lowest">Click to see</p>
                         </div>
                     </div>
                 </span>
                 <span class="salaries-slideshow-label-span">
-                    <div class="salaries-slideshow-poc">
-                        <h4 class="salaries-slideshow-label">Women of Color</h4>
+                    <div class="salaries-slideshow-lowest snapshot-slideshow-lowest">
+                        <h4 class="salaries-slideshow-label snapshot-slideshow-label">White Women</h4>
                         <div class="salaries-slideshow-arrow-container">
-                            <p id="poc-salary" class="salaries-slideshow-salary">$18,700</p> <!-- DYNAMIC DATA -->
+                            <p id="lowest-salary" class="salaries-slideshow-salary snapshot-slideshow-salary">$18,700</p> <!-- DYNAMIC DATA -->
                         </div> 
                         <div class="salaries-slideshow-profile-container">
-                            <p class="salaries-slideshow-profile-label">
+                            <p class="salaries-slideshow-profile-label snapshot-profile-label">
                                 Based on 
                                 <span class="slideshow-profile-number">554</span> <!-- DYNAMIC DATA --> 
                                 profiles
                             </p>
-                            <p class="salaries-slideshow-profile-hover hover-poc">Click to see</p>
+                        </div>
+                    </div>
+                </span>
+                <span class="salaries-slideshow-label-span">
+                    <div class="salaries-slideshow-poc snapshot-slideshow-poc">
+                        <h4 class="salaries-slideshow-label snapshot-slideshow-label">Women of Color</h4>
+                        <div class="salaries-slideshow-arrow-container">
+                            <p id="poc-salary" class="salaries-slideshow-salary snapshot-slideshow-salary">$18,700</p> <!-- DYNAMIC DATA -->
+                        </div> 
+                        <div class="salaries-slideshow-profile-container">
+                            <p class="salaries-slideshow-profile-label snapshot-profile-label">
+                                Based on 
+                                <span class="slideshow-profile-number">554</span> <!-- DYNAMIC DATA --> 
+                                profiles
+                            </p>
                         </div>
                     </div>
                 </span>
@@ -259,7 +256,7 @@
                 <p class="columns-modal-header">Columns</p>
             </div>
             <div id="columns-label-container"></div>
-            <button id="columns-modal-button" class="modal-button">Save</button>
+            <!-- <button id="columns-modal-button" class="modal-button">Save</button> -->
         </div>
     </div>
 
@@ -310,14 +307,14 @@
                 <p class="footer-links terms-and-conditions">Terms & Conditions</p>
             </div>
             <div class="social-media-links">
-                <p class="footer-links insta">Instagram</p>
-                <p class="footer-links facebook">Facebook</p>
+                <a class="blog-links" href="https://www.instagram.com/realagencysalaries/?hl=en"><p class="footer-links insta">Instagram</p></a>
             </div>
         </div>
     </footer>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./index.js"></script>
     <script src="./snapshot.js" defer></script>
 </body>
 </html>

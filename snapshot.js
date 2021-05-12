@@ -1,5 +1,11 @@
 (function ($) {
   $(function () {
+
+    // -------------------
+    // START OF JQERY FCN
+    // ------------------- 
+
+
     //filter
     // Snapshot Filter
     const filterMenu = document.getElementById("filter-menu");
@@ -388,7 +394,16 @@
       // send to backend
     });
 
+
+
+    // ***************************************************
+    // ----------------- COLUMNS LOGIC -------------------
+    // ***************************************************
+
+
+
     var $resultsCont = document.getElementById("results-container");
+    var $movingColCont = document.getElementById('moving-columns')
     var $columnsButton = document.getElementById("columns-button");
     var $columnsModal = document.getElementById("columns-modal");
     var $modalArrow = document.getElementById("columns-modal-arrow");
@@ -398,24 +413,25 @@
     var numHiddenCols = 0;
 
     var columnArray = [
-      "Country",
-      "City",
-      "Workplace",
-      "Agency",
-      "Department",
       "Job Title",
-      "Years of Experience",
-      "Number of Employers",
       "Annual Salary",
-      "Pay Transparency",
-      "Salary Satisfaction",
-      "Awards",
       "Race",
       "Gender",
       "Sexual Orientation",
       "Age",
+      "Workplace",
+      "Agency",
+      "Department",
+      "Country",
+      "City",
+      "Years of Experience",
+      "Number of Employers",
+      "Pay Transparency",
+      "Salary Satisfaction",
+      "Awards",
       "Education",
     ];
+
 
     for (var column of columnArray) {
       // FOR TABLE
@@ -423,17 +439,39 @@
       container.className = "column-container";
       container.id = `${column}-column`;
 
+      var headerCont = document.createElement('div')
+      headerCont.className = "column-header-container"
+
       var header = document.createElement("h2");
       header.className = "column-header";
       header.innerHTML = `${column}`;
+
+      var sortArrow = document.createElement("img")
+      sortArrow.src = '/Assets/Images/arrow-asc.png'
+      sortArrow.className = 'sort-arrow'
+      sortArrow.id = `${column}-arrow`
+      sortArrow.addEventListener('click', evnt => {
+        var colArrow = evnt.target
+        var colArrowLabel = colArrow.id.slice(0, -6);
+        if (colArrow.classList.length > 1) {
+            ascSort(colArrowLabel)
+            colArrow.classList.remove('descending')
+        } else {
+            dscSort(colArrowLabel)
+            colArrow.classList.add('descending')
+        }
+      })
 
       var entries = document.createElement("div");
       entries.className = "column-entries";
       entries.id = `${column}-entries`;
 
-      container.appendChild(header);
+
+      headerCont.appendChild(header)
+      headerCont.appendChild(sortArrow)
+      container.appendChild(headerCont);
       container.appendChild(entries);
-      $resultsCont.appendChild(container);
+      $resultsCont.appendChild(container)
 
       // FOR MODAL
       var columnLabelWrapper = document.createElement("div");
@@ -876,24 +914,83 @@
       },
     ];
 
-    for (var columnHeading of columnArray) {
-      for (var data of testData) {
-        var output = document.getElementById(`${columnHeading}-entries`);
-        var entryCont = document.createElement("div");
-        entryCont.className = "entry";
-        var entry = document.createElement("p");
-        entry.className = "entry-label";
 
-        var keyArr = Object.keys(data);
-        for (var key of keyArr) {
-          if (columnHeading === key) {
-            entry.innerHTML = data[key];
-          }
+    const displayResults = dataArr => {
+        for (var columnHeading of columnArray) {
+            for (var data of dataArr) {
+                var output = document.getElementById(`${columnHeading}-entries`);
+                var entryCont = document.createElement("div");
+                entryCont.className = "entry";
+                var entry = document.createElement("p");
+                entry.className = "entry-label";
+        
+                var keyArr = Object.keys(data);
+                for (var key of keyArr) {
+                    if (columnHeading === key) {
+                        entry.innerHTML = data[key];
+                    }
+                }
+        
+                entryCont.appendChild(entry);
+                output.appendChild(entryCont);
+            }
         }
+    }
 
-        entryCont.appendChild(entry);
-        output.appendChild(entryCont);
-      }
+    displayResults(testData)
+
+    const sortResults = dataArr2 => {
+        for (var columnHeading of columnArray) {
+            var parent = document.getElementById(`${columnHeading}-entries`);
+            while (parent.lastChild) {
+                parent.removeChild(parent.lastChild)
+            }
+        }
+        displayResults(dataArr2)
+    }
+
+    const sortLogic = (clikdCol, datArr, sortDir) => {
+        switch (clikdCol) {
+            case "Years of Experience":
+            case "Number of Employers":
+            case "Awards":
+            case "Age":
+            case "Annual Salary":
+                sortDir === 'asc'
+                ? datArr.sort((a, b) => a[clikdCol] - b[clikdCol])
+                : datArr.sort((a, b) => b[clikdCol] - a[clikdCol])
+            break
+
+            default:
+                var sortVal = sortDir === 'asc' ? -1 : 1
+                datArr.sort(function(a, b) {
+                    var colA = a[clikdCol].toUpperCase()
+                    var colB = b[clikdCol].toUpperCase()
+
+                    if (colA < colB) {
+                        return sortVal
+                    }
+                    if (colA > colB) {
+                        return -1 * sortVal
+                    }
+                    
+                    return 0;
+                })
+            break
+        }
+        return datArr
+    }
+
+    const ascSort = clickedColumn => {
+        var tempArr1 = testData
+        var arr1 = sortLogic(clickedColumn, tempArr1, 'asc')
+        sortResults(arr1)
+    }
+
+    const dscSort = clickedColumn => {
+        var tempArr2 = testData
+        var arr2 = sortLogic(clickedColumn, tempArr2, 'dsc')
+        sortResults(arr2)
     }
 
     var $totalAmount = document.getElementById("total-amount");
@@ -910,5 +1007,11 @@
     $modalArrow.addEventListener("click", () => {
       $columnsModal.classList.add("hide-modal");
     });
+
+
+    // ------------------
+    // END OF JQERY FCN
+    // ------------------
+
   });
 })(jQuery);
